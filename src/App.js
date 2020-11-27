@@ -1,5 +1,4 @@
 import "./App.css";
-import header from "./assets/header.jpg";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
       <div className="main"></div>
       <div className="header-container">
         <div className="content-wrapper">
-          <img src={header} alt="iris of eye" />
+          <img src={'/assets/header.jpg'} alt="iris of eye" />
         </div>
       </div>
       <div className="content-section">
