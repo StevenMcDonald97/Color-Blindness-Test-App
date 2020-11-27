@@ -1,5 +1,5 @@
 .App {
-  color: var(--white);
+  color: var(--black);
 }
 
 .content-section {
@@ -8,7 +8,8 @@
 }
 
 .content-wrapper {
-  display: flex;
+  display: grid;
+  place-items: center;
   width: 1000px;  
 }
 
@@ -17,26 +18,32 @@
   text-align: center;
   font-size: 25px;
   font-weight: bold;
+  padding: 20px;
+}
+
+.section-description {
+  padding: 20px;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   background-color: var(--dark-teal);
+  color: var(--white);
 }
 
 .nav-wrapper {
   display: grid;
-  grid-template-columns: 250px auto 210px 150px 110px;
+  grid-template-columns: 250px auto 250px 180px 130px;
   width: 1000px;
 }
 
 .nav-wrapper span {
-  font-weight: 500;
   font-size: 18px;
   margin: 10px 0;
   padding: 10px;
   text-align: right;
+  font-weight: bold;
 }
 
 .logo {
@@ -45,6 +52,7 @@
   margin: 10px 0;
   padding: 10px;
   text-align: left;
+  font-weight: bold;
 }
 
 .header-container {
@@ -56,4 +64,17 @@
 
 .header-container img{
   width: 100%;
+}
+
+.footer {
+  height: 50px;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-description {
+  color: var(--white);
+  text-align: center;
 }

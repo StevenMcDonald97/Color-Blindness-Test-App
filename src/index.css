@@ -5,7 +5,7 @@
   --dark: #212529;
   --grey: #343a40;
   --light-grey: #555555;
-  --dark-teal: #00636c ;
+  --dark-teal: #054355 ;
   --teal: #2a9d8f;
   --light-teal: #b2d8d8;
   --pink: #f2385a;
@@ -23,9 +23,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
