@@ -1,27 +1,21 @@
-import "./App.css";
+import './App.css';
+
+import { Switch, Route } from 'react-router-dom';
+
+import MainPage from 'pages/Main';
+import TestPage from 'pages/test';
 
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <div className="nav-wrapper">
-          <div class="logo">[ColorTest]</div>
-          <span></span>
-          <span>About Color Blindness</span>
-          <span>Color Blind Test</span>
-          <span>Contact us</span>
-        </div>
-      </div>
-      <div className="main"></div>
-      <div className="header-container">
-        <div className="content-wrapper">
-          <img src={'/assets/header.jpg'} alt="iris of eye" />
-        </div>
-      </div>
-      <div className="content-section">
-        <div className="content-wrapper">
-          <div className="section-header"> What is color blindness?</div></div>
-      </div>
+      <Switch>
+        <Route path="/test">
+          <TestPage />
+        </Route>
+        <Route path="/">
+          <MainPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
