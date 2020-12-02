@@ -38,6 +38,9 @@ a {
 .white-bg {
   background-color: var(--white);
 }
+.dark-bg {
+  background-color: var(--dark);
+}
 .light-grey {
   background-color: var(--light-grey);
 }

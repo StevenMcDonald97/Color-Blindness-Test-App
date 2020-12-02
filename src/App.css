@@ -1,3 +1,4 @@
+/* GENERAL & REUSEABLE */
 .App {
   color: var(--black);
 }
@@ -26,6 +27,11 @@
   padding: 20px;
 }
 
+.flex {
+  display: flex;
+}
+
+/*  NAVBAR */
 .navbar {
   display: flex;
   justify-content: center;
@@ -49,12 +55,12 @@
 .logo {
   font-weight: 500;
   font-size: 18px;
-  margin: 10px 0;
   padding: 10px;
   text-align: left;
   font-weight: bold;
 }
 
+/* HEADER */
 .header-container {
   display: grid;
   place-items: center;
@@ -93,6 +99,8 @@
   width: 100%;
 }
 
+
+/* SMALL CARD */
 .card-grid {
   display: grid;
   margin: 1rem;
@@ -137,8 +145,7 @@
   padding: var(--large-size);
 }
 
-
-
+/* FOOTER */
 .footer {
   background-color: var(--dark-teal);
   display: flex;
@@ -179,7 +186,50 @@
   background-color: var(--teal);
 }
 
+/*  TestPage */
+input {
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+}
 
-.input-container {
-  display: flex;
+.button {
+  padding: 5px 10px;
+  font-weight: bold;
+  border: 1px solid var(--dark-teal);
+  border-radius: 4px;
+  margin: 5px;
+  transition: all 0.3s ease 0s;
+  background-color: var(--dark-teal);
+  color: var(--white);
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.test-content {
+  display: grid;
+  place-items: center;
+}
+
+.test-card {
+  height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+.test-image img {
+  border-radius: 50%;
+}
+
+.score-container {
+  height: 400px;
 }

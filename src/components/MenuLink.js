@@ -8,16 +8,16 @@ const MenuLink = () => {
       display: "flex",
       alignItems: "center",
       color: "inherit",
-      padding: 10,
-      margin: 10,
+      padding: "5px 10px",
+      margin: "5px",
       fontWeight: "bold"
     },
     activeLink: {
       backgroundColor: "#054355",
       color: "#f0efeb",
       borderRadius: "5%",
-      padding: 10,
-      margin: 10,
+      padding: "5px 10px",
+      margin: "5px",
       fontWeight: "bold"
     },
     text: {
