@@ -7,12 +7,18 @@ const TestPage = () => {
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const [testCards, setTestCards] = useState(testCardsOriginal);
+  const [testCards, setTestCards] = useState([...testCardsOriginal]);
 
   function handleKeyDown(e) {
     if (e.key === "Enter" && answer !== "") {
       checkAnswer();
     }
+  }
+
+  function unSureAnswer() {
+    setScore(score + 0);
+    nextTestCard();
+    setAnswer("");
   }
 
   function checkAnswer() {
@@ -25,30 +31,29 @@ const TestPage = () => {
     setAnswer("");
   }
 
+  function resetTest() {
+    setScore(0);
+    setTestCards([...testCardsOriginal]);
+    setShowScore(false);
+    console.log(score);
+    console.log(testCards);
+  }
+
   function nextTestCard() {
     let currentCardArray = testCards;
     if (currentCardArray.length > 1) {
       currentCardArray.splice(randomIndex, 1);
       setTestCards(currentCardArray);
       setRandomIndex(Math.floor(Math.random() * testCards.length));
-      console.log(testCards);
     } else {
       setShowScore(true);
       setTestCards(testCards);
     }
   }
 
-  function resetTest() {
-    setScore(0);
-    setShowScore(false);
-  }
 
   return (
     <div className="main">
-      <div className="header-container">
-        <div className="content-wrapper"></div>
-      </div>
-
       <div className="content-section">
         <div className="content-wrapper">
           <div className="section-header">Color Blind Test</div>
@@ -75,6 +80,14 @@ const TestPage = () => {
                     setAnswer(e.target.value);
                   }}
                 />
+                                <div
+                  className="button"
+                  onClick={() => {
+                    unSureAnswer();
+                  }}
+                >
+                  Not Sure
+                </div>
                 <div
                   className="button"
                   onClick={() => {
