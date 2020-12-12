@@ -6,6 +6,7 @@ const TestCard = (props) => {
       <div className="test-image">
         <img src={props.imgSrc} alt={props.alt} />{" "}
       </div>
+      <p>{props.quote}</p>
     </div>
   );
 };

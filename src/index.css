@@ -1,13 +1,13 @@
 :root {
   --main-bg-color: #212529;
   --secondary-bg-color: #343a40;
-
   --dark: #212529;
   --mid-grey: #343a40;
   --grey: #555555;
   --light-grey: #F5F5F5;
   --dark-teal: #054355 ;
-  --teal: #b2d8d8;
+  --teal: #368f8b; 
+  --light-teal: #b2d8d8;
   --light-teal: #dbe9e9;
   --pink: #f2385a;
   --orange: #f5a503;
@@ -59,3 +59,4 @@ a {
 .light-font {
   color: var(--white);
 }
+

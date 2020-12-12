@@ -4,8 +4,10 @@ import { Switch, Route } from "react-router-dom";
 
 import MenuLink from "components/MenuLink";
 import MainPage from "pages/MainPage";
-import TestPage from "pages/TestPage";
-import AboutPage from "pages/AboutPage";
+import AboutCB from "pages/AboutCB";
+import AboutHD from "pages/AboutHD";
+import TestCB from "pages/TestCB";
+import TestHD from "pages/TestHD";
 import ContactPage from "pages/ContactPage";
 
 function App() {
@@ -18,12 +20,20 @@ function App() {
           <MainPage />
         </Route>
 
-        <Route exact path="/about">
-          <AboutPage />
+        <Route exact path="/about-color-blind">
+          <AboutCB />
         </Route>
 
-        <Route exact path="/test">
-          <TestPage />
+        <Route exact path="/about-hearing-disability">
+          <AboutHD />
+        </Route>
+
+        <Route exact path="/test-colorblindness">
+          <TestCB />
+        </Route>
+
+        <Route exact path="/test-hearing">
+          <TestHD />
         </Route>
 
         <Route exact path="/contact">

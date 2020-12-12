@@ -2,30 +2,15 @@ import React from "react";
 import { FaAt, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import Section from "../components/Section";
 import mainContents from "../data/mainContents";
-import headerImg from "../assets/header.jpg";
 import SmallCard from "components/SmallCard";
 
 
 const MainPage = () => {
   return (
     <div className="main">
-      <div className="header-container light-teal">
-        <div className="content-wrapper">
-          <div className="headline-container">
-            <div className="headline-text">
-              <div className="headline-title">COLOR BLINDNESS</div>
-              <div className="headline-subtitle">
-                Have no fear,
-                <br />
-                you only see things differently.
-              </div>
-            </div>
-            <div className="headline-image">
-              <img src={headerImg} alt="types of colorblind" />
-            </div>
-          </div>
-        </div>
+      <div className="header-container home-bg-img">
       </div>
+
 
       <div className="content-section">
         {mainContents
