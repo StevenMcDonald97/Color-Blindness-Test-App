@@ -1,13 +1,13 @@
 :root {
   --main-bg-color: #212529;
   --secondary-bg-color: #343a40;
-
   --dark: #212529;
-  --grey: #343a40;
-  --light-grey: #555555;
-  --dark-teal: #00636c ;
-  --teal: #2a9d8f;
-  --light-teal: #b2d8d8;
+  --mid-grey: #343a40;
+  --grey: #555555;
+  --light-grey: #F0F0F0;
+  --dark-teal: #054355 ;
+  --teal: #368f8b; 
+  --light-teal: #dbe9e9;
   --pink: #f2385a;
   --orange: #f5a503;
   --white: #f0efeb;
@@ -23,9 +23,39 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Hind Siliguri', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* COLOR CLASSES */
+.white-bg {
+  background-color: var(--white);
+}
+.dark-bg {
+  background-color: var(--dark);
+}
+.light-grey {
+  background-color: var(--light-grey);
+}
+.light-teal {
+  background-color: var(--light-teal);
+}
+.teal {
+  background-color: var(--teal);
+}
+.dark-teal {
+  background-color: var(--dark-teal);
+}
+.dark-font {
+  color: var(--dark);
+}
+.light-font {
+  color: var(--white);
+}
+
