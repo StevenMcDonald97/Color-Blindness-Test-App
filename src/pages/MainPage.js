@@ -3,12 +3,15 @@ import { FaAt, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import Section from "../components/Section";
 import mainContents from "../data/mainContents";
 import SmallCard from "components/SmallCard";
-
+import header1 from "../assets/home-header1.jpg"
+import header2 from "../assets/home-header2.jpg"
 
 const MainPage = () => {
   return (
     <div className="main">
-      <div className="header-container home-bg-img">
+      <div className="header-container grid2x1">
+        <div className="header-half"><img src={header1} alt="colours"/></div>
+        <div className="header-half"><img src={header2} alt="headphone"/></div>
       </div>
 
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import testCardsOriginal from "data/testCards";
+import testCardsOriginal from "data/testCardsCB";
 import TestCard from "../components/TestCard";
 
 const TestCB = () => {
-  const [randomIndex, setRandomIndex] = useState(0);
+  const [randomIndexCB, setRandomIndexCB] = useState(0);
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -22,7 +22,7 @@ const TestCB = () => {
   }
 
   function checkAnswer() {
-    if (answer !== "" && answer === testCards[randomIndex].answer) {
+    if (answer !== "" && answer === testCards[randomIndexCB].answer) {
       setScore(score + 1);
     } else {
       setScore(score + 0);
@@ -31,26 +31,23 @@ const TestCB = () => {
     setAnswer("");
   }
 
-  function resetTest() {
-    setScore(0);
-    setTestCards([...testCardsOriginal]);
-    setShowScore(false);
-    console.log(score);
-    console.log(testCards);
-  }
-
   function nextTestCard() {
     let currentCardArray = testCards;
     if (currentCardArray.length > 1) {
-      currentCardArray.splice(randomIndex, 1);
+      currentCardArray.splice(randomIndexCB, 1);
       setTestCards(currentCardArray);
-      setRandomIndex(Math.floor(Math.random() * testCards.length));
+      setRandomIndexCB(Math.floor(Math.random() * testCards.length));
+      console.log(testCards);
     } else {
       setShowScore(true);
-      setTestCards(testCards);
+      setTestCards([...testCardsOriginal]);
     }
   }
 
+  function resetTest() {
+    setScore(0);
+    setShowScore(false);
+  }
 
   return (
     <div className="main">
@@ -65,8 +62,8 @@ const TestCB = () => {
                 answer in the box below.
               </div>
               <TestCard
-                imgSrc={testCards[randomIndex].imgSrc}
-                alt={testCards[randomIndex].alt}
+                imgSrc={testCards[randomIndexCB].imgSrc}
+                alt={testCards[randomIndexCB].alt}
               />
               <div className="input-container flex">
                 <input
@@ -96,7 +93,7 @@ const TestCB = () => {
                 >
                   Submit
                 </div>
-              </div>{" "}
+              </div>
             </div>
           ) : (
             <div className="score-container">
@@ -107,7 +104,7 @@ const TestCB = () => {
                   resetTest();
                 }}
               >
-                Reset/Close
+                Close
               </div>
             </div>
           )}

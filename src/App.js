@@ -6,8 +6,7 @@ import MenuLink from "components/MenuLink";
 import MainPage from "pages/MainPage";
 import AboutCB from "pages/AboutCB";
 import AboutHD from "pages/AboutHD";
-import TestCB from "pages/TestCB";
-import TestHD from "pages/TestHD";
+import TestsPage from "pages/TestsPage";
 import ContactPage from "pages/ContactPage";
 
 function App() {
@@ -28,13 +27,10 @@ function App() {
           <AboutHD />
         </Route>
 
-        <Route exact path="/test-colorblindness">
-          <TestCB />
+        <Route exact path="/tests">
+          <TestsPage />
         </Route>
 
-        <Route exact path="/test-hearing">
-          <TestHD />
-        </Route>
 
         <Route exact path="/contact">
           <ContactPage />

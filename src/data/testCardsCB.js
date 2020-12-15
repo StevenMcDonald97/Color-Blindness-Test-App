@@ -14,7 +14,7 @@ import testImg13 from "../assets/test-images/test-image13.png";
 import testImg14 from "../assets/test-images/test-image14.png";
 import testImg15 from "../assets/test-images/test-image15.png";
 
-const testCards = [
+const testCardsCB = [
      {
           id: "1",
           imgSrc: testImg1,
@@ -107,4 +107,4 @@ const testCards = [
      }
 ]
 
-export default testCards;
+export default testCardsCB;
