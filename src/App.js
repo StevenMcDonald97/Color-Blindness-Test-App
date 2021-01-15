@@ -1,19 +1,17 @@
 import "./App.css";
-
 import { Switch, Route } from "react-router-dom";
 
-import MenuLink from "components/MenuLink";
 import MainPage from "pages/MainPage";
 import AboutCB from "pages/AboutCB";
 import AboutHD from "pages/AboutHD";
 import TestsPage from "pages/TestsPage";
 import ContactPage from "pages/ContactPage";
+import MenuLink from "components/MenuLink"
 
 function App() {
   return (
     <div className="App">
-      <MenuLink />
-
+      <MenuLink/>
       <Switch>
         <Route exact path="/">
           <MainPage />

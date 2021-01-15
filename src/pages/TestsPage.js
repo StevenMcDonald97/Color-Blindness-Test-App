@@ -7,6 +7,7 @@ import Box from "@material-ui/core/Box";
 import TestCB from "./TestCB";
 import TestHD from "./TestHD";
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -38,11 +39,10 @@ const TestsPage = () => {
   const [value, setValue] = useState(0);
 
   const styles = {
-    backgroundColor: '#368f8b',
-    color: '#f0efeb',
-    fontFamily: 'inherit',
+    backgroundColor: "#076D7C",
+    color: "#f0efeb",
+    fontFamily: "inherit",
     fontWeight: 500,
-    width: 800,
   };
 
   const handleChange = (event, newValue) => {
@@ -50,25 +50,28 @@ const TestsPage = () => {
   };
 
   return (
-    <div className="main">
-      <div className="tests-tab-container">
-        <div className="tests-tab-wrapper">
-          <AppBar position="static" style={styles}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="simple tabs example"
-            >
-              <Tab label="Color Blind Test" {...a11yProps(0)} />
-              <Tab label="Hearing Test" {...a11yProps(1)} />
-            </Tabs>
-          </AppBar>
-          <TabPanel value={value} index={0}>
-            <TestCB />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <TestHD />
-          </TabPanel>
+    <div className="page">
+      <div style={{ height: "70vh", background: "#dbe9e9" }}></div>
+      <div className="main">
+        <div className="tests-tab-container">
+          <div className="tests-tab-wrapper">
+            <AppBar position="static" style={styles}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="simple tabs example"
+              >
+                <Tab label="Color Blind Test" {...a11yProps(0)} />
+                <Tab label="Hearing Test" {...a11yProps(1)} />
+              </Tabs>
+            </AppBar>
+            <TabPanel value={value} index={0}>
+              <TestCB />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <TestHD />
+            </TabPanel>
+          </div>
         </div>
       </div>
     </div>

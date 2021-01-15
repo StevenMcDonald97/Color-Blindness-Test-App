@@ -21,32 +21,26 @@ const MenuLink = () => {
       display: "flex",
       fontSize: 18,
       alignItems: "center",
-      fontWeight: "bold",
       fontFamily: "inherit",
-      textTransform: "capitalize",
+      fontWeight: 'bold',
       color: "inherit",
     },
     activeLink: {
-      borderBottom: "1.5px solid #f0efeb",
+      borderBottom: "1.5px solid #212529",
       fontFamily: "inherit",
-      fontWeight: "bold",
     },
     menuItem: {
       fontFamily: "inherit",
+      fontSize: 14,    
     },
   };
   return (
     <div className="navbar">
-      <span style={styles.link}>
-        <NavLink exact to="/">
-          LOGO
-        </NavLink>
-      </span>
       <div className="nav-wrapper">
         <span>
           <Button style={styles.link}>
             <NavLink exact to="/" activeStyle={styles.activeLink}>
-              Home
+              HOME
             </NavLink>
           </Button>
         </span>
@@ -56,10 +50,11 @@ const MenuLink = () => {
             onClick={handleClick}
             style={styles.link}
           >
-            Information <RiArrowDropDownLine />
+            INFORMATION <RiArrowDropDownLine />
           </Button>
           <Menu
             id="simple-menu"
+            style={styles.menu}
             anchorEl={anchorEl}
             elevation={0}
             getContentAnchorEl={null}
@@ -77,12 +72,12 @@ const MenuLink = () => {
           >
             <MenuItem onClick={handleClose}>
               <NavLink to="/about-color-blind" style={styles.menuItem}>
-                Color Blindness
+                COLOR BLINDNESS
               </NavLink>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <NavLink to="/about-hearing-disability" style={styles.menuItem}>
-                Hearing Disability
+                HEARING DISABILITY
               </NavLink>
             </MenuItem>
           </Menu>
@@ -95,7 +90,7 @@ const MenuLink = () => {
               style={styles.link}
               activeStyle={styles.activeLink}
             >
-              Take a Test
+              TAKE A TEST
             </NavLink>
           </Button>
         </span>
@@ -107,7 +102,7 @@ const MenuLink = () => {
               activeStyle={styles.activeLink}
               style={styles.link}
             >
-              Contact Us
+              CONTACT US
             </NavLink>
           </Button>
         </span>

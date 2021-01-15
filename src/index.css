@@ -1,14 +1,17 @@
 :root {
   --main-bg-color: #212529;
   --secondary-bg-color: #343a40;
+  --light-green-bg: #D0DEC0;
+
   --dark: #212529;
   --mid-grey: #343a40;
   --grey: #555555;
   --light-grey: #F0F0F0;
-  --dark-teal: #054355 ;
+  --dark-teal: #037272 ;
   --teal: #368f8b; 
   --light-teal: #dbe9e9;
-  --pink: #f2385a;
+  --dark-blue: #2E4871;
+
   --orange: #f5a503;
   --white: #f0efeb;
 }
@@ -26,6 +29,7 @@ body {
   font-family: 'Hind Siliguri', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
 }
 
 a {
@@ -40,12 +44,17 @@ a {
 .dark-bg {
   background-color: var(--dark);
 }
+
+.light-green-bg {
+  background-color: var(--light-green-bg);
+}
 .light-grey {
   background-color: var(--light-grey);
 }
 .light-teal {
   background-color: var(--light-teal);
 }
+
 .teal {
   background-color: var(--teal);
 }

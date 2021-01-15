@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import testCardsOriginal from "data/testCardsCB";
 import TestCard from "../components/TestCard";
+import OutlinedInput from '@material-ui/core/OutlinedInput';
 
 const TestCB = () => {
   const [randomIndexCB, setRandomIndexCB] = useState(0);
@@ -8,6 +9,14 @@ const TestCB = () => {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [testCards, setTestCards] = useState([...testCardsOriginal]);
+
+  const styles = {
+    input: {
+      height: 40,
+      width: 200,
+      margin: 10
+    }
+  }
 
   function handleKeyDown(e) {
     if (e.key === "Enter" && answer !== "") {
@@ -66,7 +75,8 @@ const TestCB = () => {
                 alt={testCards[randomIndexCB].alt}
               />
               <div className="input-container flex">
-                <input
+                <OutlinedInput
+                  style={styles.input}
                   type="number"
                   placeholder="Enter your answer here"
                   value={answer}
@@ -97,7 +107,7 @@ const TestCB = () => {
             </div>
           ) : (
             <div className="score-container">
-              <div className="score">Your score is {score}/15.</div>
+              <div className="score">Your score is {score}/{testCards.length}.</div>
               <div
                 className="button"
                 onClick={() => {

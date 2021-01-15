@@ -3,41 +3,32 @@ import { FaAt, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import Section from "../components/Section";
 import mainContents from "../data/mainContents";
 import SmallCard from "components/SmallCard";
-import header1 from "../assets/home-header1.jpg"
-import header2 from "../assets/home-header2.jpg"
+import header1 from "../assets/home-header1.jpg";
+import header2 from "../assets/home-header2.jpg";
 
 const MainPage = () => {
   return (
     <div className="main">
       <div className="header-container grid2x1">
-        <div className="header-half"><img src={header1} alt="colours"/></div>
-        <div className="header-half"><img src={header2} alt="headphone"/></div>
-      </div>
-
-
-      <div className="content-section">
-        {mainContents
-          .filter((content) => content.section === "About")
-          .map((info,i) => (
-            <Section key={i} title={info.title} description={info.infos} />
-          ))}
-        <SmallCard title="Facts" description="statisctics"/>
-      </div>
-
-      <div className="content-section light-grey">
-        {mainContents
-          .filter((content) => content.section === "Test")
-          .map((info, i) => (
-            <Section key={i} title={info.title} description={info.infos} />
-          ))}
+        <div className="header-half">
+          <img src={header1} alt="colorful gates" />
+        </div>
+        <div className="header-half">
+          <img src={header2} alt="headphones" />
+        </div>
+        <div className="header-CPA-container">
+          <div className="header-headline">Welcome to .....</div>
+          <div className="headline-subtitle">bla bla bla bla bla</div>
+          <div className="headline-subtitle">bla bla bla bla bla</div>
+          <div className="CPA-container">
+            <div className="CFA">More on Color Blindness</div>
+            <div className="CFA">More on Hearing Disability</div>
+          </div>
+        </div>
       </div>
 
       <div className="content-section">
-        {mainContents
-          .filter((content) => content.section === "Contact")
-          .map((info, i) => (
-            <Section key={i} title={info.title} description={info.infos} />
-          ))}
+        <span style={{height: '80vh'}}></span>
       </div>
 
       <div className="footer">
@@ -48,36 +39,24 @@ const MainPage = () => {
                 <FaLinkedinIn />
               </div>
             </a>
-            <a
-              href=" "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <div className="icon white-bg">
                 <FaGithub />
               </div>
             </a>
-            <a
-              href=" "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <div className="icon white-bg">
                 <FaAt />
               </div>
             </a>
-            <a
-              href=" "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href=" " target="_blank" rel="noopener noreferrer">
               <div className="icon white-bg">
                 <FaTwitter />
               </div>
             </a>
           </div>
           <div className="footer-description">
-              Credits: Icons made by Freepik from www.flaticon.com
+            Credits: Icons made by Freepik from www.flaticon.com
           </div>
         </div>
       </div>
