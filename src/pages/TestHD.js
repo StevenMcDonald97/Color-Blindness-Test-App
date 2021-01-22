@@ -9,7 +9,7 @@ const TestHD = () => {
   const [testAudio, setTestAudio] = useState([...testAudioOriginal]);
 
   const playAudio = () => {
-    let audio = document.getElementById("audio-element");
+    const audio = document.getElementById("audio-element");
     audio.play();
     console.log("Clicked");
   };
@@ -21,7 +21,6 @@ const TestHD = () => {
     } else {
       setScore(score + 0);
     }
-    nextTestAudio();
   }
 
   function nextTestAudio() {
@@ -76,14 +75,14 @@ const TestHD = () => {
               <div
                 className="button"
                 onClick={() => {
-                  checkAnswer();
+                  nextTestAudio();
                 }}
               >
-                Submit
+                Next
               </div>
             </div>
             <div>
-              <audio id="audio-element">
+              <audio id="audio-element" key={testAudio[randomIndexHD].audioSrc}>
                 <source src={testAudio[randomIndexHD].audioSrc}></source>
               </audio>
             </div>
