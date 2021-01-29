@@ -19,7 +19,7 @@
 }
 
 .section-description {
-  padding: 20px;
+  margin: 20px;
 }
 
 .flex {
@@ -31,6 +31,11 @@
   padding: 5px 10px !important;
   transition: all 0.3s ease 0s !important;
 }
+
+.MuiSlider-root {
+  color: var(--teal) !important;
+}
+
 
 /*  NAVBAR */
 .navbar {
@@ -247,6 +252,7 @@ input {
 
 .buttons-container {
   display: flex;
+  width: auto;
 }
 
 .button {
@@ -267,6 +273,13 @@ input {
 .button:hover {
   opacity: 0.9;
   box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
 }
 
 input::-webkit-outer-spin-button,
@@ -322,6 +335,7 @@ input[type=number] {
 .pad {
   display: flex;
   border-radius: 50%;
+  border: 2px solid transparent;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   cursor: pointer;
 }
@@ -336,4 +350,7 @@ input[type=number] {
   padding: 15px;
 }
 
+.selected {
+  border: 2px solid var(--teal);
+}
 

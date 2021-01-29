@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Slider from '@material-ui/core/Slider';
+import VolumeDown from '@material-ui/icons/VolumeDown';
+import VolumeUp from '@material-ui/icons/VolumeUp';
 import testAudioOriginal from "data/testDataHD";
 import testDataHD from "data/testDataHD";
 
@@ -7,23 +10,28 @@ const TestHD = () => {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [testAudio, setTestAudio] = useState([...testAudioOriginal]);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [value, setValue] = useState(30);
+  const [audio, setAudio] = useState(null);
 
-  const playAudio = () => {
-    const audio = document.getElementById("audio-element");
+  useEffect(() => setAudio(document.getElementById("audio-element")), [randomIndexHD,value]);
+
+  const playAudio = () => {    
+    audio.volume = value/100.0;
+    console.log(audio.volume);
     audio.play();
-    console.log("Clicked");
   };
 
-  function checkAnswer(answer) {
-    console.log(answer);
-    if (answer !== "" && answer === testAudio[randomIndexHD].answer) {
+  const checkAnswer = () => {
+    if (selectedAnswer !== "" && selectedAnswer === testAudio[randomIndexHD].answer) {
       setScore(score + 1);
     } else {
       setScore(score + 0);
-    }
+    };
+    console.log(score)
   }
 
-  function nextTestAudio() {
+  const nextTestAudio = () => {
     let currentAudioArray = testAudio;
     if (currentAudioArray.length > 1) {
       currentAudioArray.splice(randomIndexHD, 1);
@@ -36,10 +44,25 @@ const TestHD = () => {
     }
   }
 
-  function resetTest() {
+  const submitAnswer = () => {
+    checkAnswer();
+    nextTestAudio()
+  }
+
+  const resetTest = () => {
     setScore(0);
     setShowScore(false);
   }
+
+  const handleToggle = (answer) => {
+    setSelectedAnswer(answer);
+    console.log(answer);
+  }
+
+  const handleVolumeChange = (event, newValue) => {
+    setValue(newValue);
+    audio.volume = value/100.0;
+  };
 
   return (
     <div className="content-section">
@@ -52,16 +75,25 @@ const TestHD = () => {
               Press the play button, listen to the word and press the correct
               picture of the word.
             </div>
-
+            <div className="buttons-container">
+              <div className="button" onClick={playAudio}>
+                Play
+              </div>
+              <div className="slider-container">
+                <VolumeDown />
+                <Slider value={value} onChange={handleVolumeChange} aria-labelledby="continuous-slider" />
+                <VolumeUp />
+                {value}
+              </div>
+            </div>
             <div className="pad-container">
               {testDataHD.map((pad) => (
-                <div className="pad">
+                <div className={`pad ${selectedAnswer === pad.answer ? "selected" : ""}`}>
                   <img
                     src={pad.imgSrc}
                     alt={pad.alt}
                     onClick={() => {
-                      checkAnswer(pad.answer);
-                      console.log(pad.answer)
+                      handleToggle(pad.answer);
                     }}
                   />
                 </div>
@@ -69,16 +101,13 @@ const TestHD = () => {
             </div>
             <div>{testAudio[randomIndexHD].audioSrc}</div>
             <div className="buttons-container">
-              <div className="button" onClick={playAudio}>
-                Play
-              </div>
               <div
                 className="button"
                 onClick={() => {
-                  nextTestAudio();
+                  submitAnswer();
                 }}
               >
-                Next
+                Submit
               </div>
             </div>
             <div>
@@ -88,18 +117,18 @@ const TestHD = () => {
             </div>
           </div>
         ) : (
-          <div className="score-container">
-            <div className="score">Your score is {score}/{testAudio.length}.</div>
-            <div
-              className="button"
-              onClick={() => {
-                resetTest();
-              }}
-            >
-              Close
+            <div className="score-container">
+              <div className="score">Your score is {score}/{testAudio.length}.</div>
+              <div
+                className="button"
+                onClick={() => {
+                  resetTest();
+                }}
+              >
+                Close
             </div>
-          </div>
-        )}
+            </div>
+          )}
       </div>
     </div>
   );

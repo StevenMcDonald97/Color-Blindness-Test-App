@@ -56,6 +56,7 @@ const MainPage = () => {
             </a>
           </div>
           <div className="footer-description">
+            Finely tuned by Kavitha and Neo Hsueh Yen <br />
             Credits: Icons made by Freepik from www.flaticon.com
           </div>
         </div>
