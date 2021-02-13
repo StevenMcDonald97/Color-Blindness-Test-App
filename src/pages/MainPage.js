@@ -1,10 +1,9 @@
 import React from "react";
+
+import header1 from "../assets/header/home-header1.jpg";
+import header2 from "../assets/header/home-header2.jpg";
+
 import { FaAt, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
-import Section from "../components/Section";
-import mainContents from "../data/mainContents";
-import SmallCard from "components/SmallCard";
-import header1 from "../assets/home-header1.jpg";
-import header2 from "../assets/home-header2.jpg";
 
 const MainPage = () => {
   return (

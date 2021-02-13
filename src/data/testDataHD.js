@@ -1,68 +1,104 @@
-import houseImg from "../assets/test-hearing/house.png";
-import bananaImg from "../assets/test-hearing/banana.png";
-import elephantImg from "../assets/test-hearing/elephant.png";
-import spiderImg from "../assets/test-hearing/spider.png";
-import fishImg from "../assets/test-hearing/fish.png";
-import snakeImg from "../assets/test-hearing/snake.png";
-import cameraImg from "../assets/test-hearing/camera.png";
-import chickenImg from "../assets/test-hearing/chicken.png";
-import crabImg from "../assets/test-hearing/crab.png";
+import houseImg from "../assets/testHD-pad/house.png";
+import treeImg from "../assets/testHD-pad/tree.png";
+import babyImg from "../assets/testHD-pad/baby.png";
+import umbrellaImg from "../assets/testHD-pad/umbrella.png";
+import noseImg from "../assets/testHD-pad/nose.png";
+import sunImg from "../assets/testHD-pad/sun.png";
+import chairImg from "../assets/testHD-pad/chair.png";
+import lionImg from "../assets/testHD-pad/lion.png";
+import fishImg from "../assets/testHD-pad/fish.png";
 
 
 const testDataHD = [
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/house/house__gb_3.mp3",
+          audioSrcEN: "../assets/audio-hearing-test/en/houseEN.mp3",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
           imgSrc: houseImg,
           alt: "house",
           answer: "house"
      },
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/ele/eleph/elephant__gb_1.mp3",
-          imgSrc: elephantImg,
-          alt: "elephant",
-          answer: "elephant"
+          audioSrcEN: "../assets/audio-hearing-test/en/treeEN.mp3",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: treeImg,
+          alt: "tree",
+          answer: "tree"
      },
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/ban/banan/banana__gb_2.mp3",
-          imgSrc: bananaImg,
-          alt: "banana",
-          answer: "banana"
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: babyImg,
+          alt: "baby",
+          answer: "baby"
      },
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/spi/spide/spider__gb_2.mp3",
-          imgSrc: spiderImg,
-          alt: "spider",
-          answer: "spider"
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: umbrellaImg,
+          alt: "umbrella",
+          answer: "umbrella"
      },
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cam/camer/camera__gb_2.mp3",
-          imgSrc: cameraImg,
-          alt: "camera",
-          answer: "camera"
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: noseImg,
+          alt: "nose",
+          answer: "nose"
      },
      {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fis/fish_/fish__gb_3.mp3",
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: sunImg,
+          alt: "sun",
+          answer: "sun"
+     },
+     {
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: chairImg,
+          alt: "chair",
+          answer: "chair"
+     },
+     {
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
+          imgSrc: lionImg,
+          alt: "lion",
+          answer: "lion"
+     },
+     {
+          audioSrcEN: "",
+          audioSrcKA: "",
+          audioSrcHI: "",
+          audioSrcTE: "",
+          audioSrcTM: "",
           imgSrc: fishImg,
           alt: "fish",
           answer: "fish"
-     },
-     {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sna/snake/snake__gb_2.mp3",
-          imgSrc: snakeImg,
-          alt: "snake",
-          answer: "snake"
-     },
-     {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/chi/chick/chicken__gb_3.mp3",
-          imgSrc: chickenImg,
-          alt: "chicken",
-          answer: "chicken"
-     },
-     {
-          audioSrc: "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cra/crab_/crab__gb_2.mp3",
-          imgSrc: crabImg,
-          alt: "crab",
-          answer: "crab"
      }
 ]
 

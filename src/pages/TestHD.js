@@ -5,6 +5,7 @@ import VolumeUp from '@material-ui/icons/VolumeUp';
 import testAudioOriginal from "data/testDataHD";
 import testDataHD from "data/testDataHD";
 
+
 const TestHD = () => {
   const [randomIndexHD, setRandomIndexHD] = useState(0);
   const [score, setScore] = useState(0);
@@ -67,6 +68,8 @@ const TestHD = () => {
   return (
     <div className="content-section">
       <div className="content-wrapper">
+        {/*Choose Languages Section before entering the test */}
+        
         <div className="section-header">Hearing Test</div>
 
         {showScore === false ? (
@@ -81,7 +84,7 @@ const TestHD = () => {
               </div>
               <div className="slider-container">
                 <VolumeDown />
-                <Slider value={value} onChange={handleVolumeChange} aria-labelledby="continuous-slider" />
+                  <Slider value={value} onChange={handleVolumeChange} aria-labelledby="continuous-slider" />
                 <VolumeUp />
                 {value}
               </div>
@@ -99,7 +102,7 @@ const TestHD = () => {
                 </div>
               ))}
             </div>
-            <div>{testAudio[randomIndexHD].audioSrc}</div>
+            <div>{testAudio[randomIndexHD].audioSrcEN}</div>
             <div className="buttons-container">
               <div
                 className="button"
@@ -111,8 +114,8 @@ const TestHD = () => {
               </div>
             </div>
             <div>
-              <audio id="audio-element" key={testAudio[randomIndexHD].audioSrc}>
-                <source src={testAudio[randomIndexHD].audioSrc}></source>
+              <audio id="audio-element" key={testAudio[randomIndexHD].audioSrcEN}>
+                <source src="/assets/audio-hearing-test/en/houseEN.mp3" type="audio/mp3"></source>
               </audio>
             </div>
           </div>

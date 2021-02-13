@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import "../components/styles.css";
+
 import testCardsOriginal from "data/testCardsCB";
 import TestCard from "../components/TestCard";
-import OutlinedInput from '@material-ui/core/OutlinedInput';
+
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+
 
 const TestCB = () => {
   const [randomIndexCB, setRandomIndexCB] = useState(0);
@@ -18,19 +22,19 @@ const TestCB = () => {
     }
   }
 
-  function handleKeyDown(e) {
+  const handleKeyDown = (e) => {
     if (e.key === "Enter" && answer !== "") {
       checkAnswer();
     }
   }
 
-  function unSureAnswer() {
+  const unSureAnswer = () => {
     setScore(score + 0);
     nextTestCard();
     setAnswer("");
   }
 
-  function checkAnswer() {
+  const checkAnswer = () => {
     if (answer !== "" && answer === testCards[randomIndexCB].answer) {
       setScore(score + 1);
     } else {
@@ -40,7 +44,7 @@ const TestCB = () => {
     setAnswer("");
   }
 
-  function nextTestCard() {
+  const nextTestCard = () => {
     let currentCardArray = testCards;
     if (currentCardArray.length > 1) {
       currentCardArray.splice(randomIndexCB, 1);
@@ -53,7 +57,7 @@ const TestCB = () => {
     }
   }
 
-  function resetTest() {
+  const resetTest = () => {
     setScore(0);
     setShowScore(false);
   }

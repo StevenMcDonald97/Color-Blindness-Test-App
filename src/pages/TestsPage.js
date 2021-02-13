@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import TestCB from "./TestCB";
+import TestHD from "./TestHD";
+
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import TestCB from "./TestCB";
-import TestHD from "./TestHD";
 
 
 function TabPanel(props) {
@@ -28,7 +29,7 @@ function TabPanel(props) {
   );
 }
 
-function a11yProps(index) {
+const a11yProps = (index) => {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -39,7 +40,7 @@ const TestsPage = () => {
   const [value, setValue] = useState(0);
 
   const styles = {
-    backgroundColor: "#076D7C",
+    backgroundColor: "#037272",
     color: "#f0efeb",
     fontFamily: "inherit",
     fontWeight: 500,
@@ -51,7 +52,7 @@ const TestsPage = () => {
 
   return (
     <div className="page">
-      <div style={{ height: "70vh", background: "#dbe9e9" }}></div>
+      <div></div>
       <div className="main">
         <div className="tests-tab-container">
           <div className="tests-tab-wrapper">
