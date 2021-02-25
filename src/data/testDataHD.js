@@ -11,7 +11,7 @@ import fishImg from "../assets/testHD-pad/fish.png";
 
 const testDataHD = [
      {
-          audioSrcEN: "../assets/audio-hearing-test/en/houseEN.mp3",
+          audioSrcEN: "audio/houseEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -21,7 +21,7 @@ const testDataHD = [
           answer: "house"
      },
      {
-          audioSrcEN: "../assets/audio-hearing-test/en/treeEN.mp3",
+          audioSrcEN: "audio/treeEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -31,7 +31,7 @@ const testDataHD = [
           answer: "tree"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/babyEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -41,7 +41,7 @@ const testDataHD = [
           answer: "baby"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/umbrellaEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -51,7 +51,7 @@ const testDataHD = [
           answer: "umbrella"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/noseEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -61,7 +61,7 @@ const testDataHD = [
           answer: "nose"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/sunEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -71,7 +71,7 @@ const testDataHD = [
           answer: "sun"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/chairEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",
@@ -81,7 +81,7 @@ const testDataHD = [
           answer: "chair"
      },
      {
-          audioSrcEN: "",
+          audioSrcEN: "audio/lionEN.mp3",
           audioSrcKA: "",
           audioSrcHI: "",
           audioSrcTE: "",

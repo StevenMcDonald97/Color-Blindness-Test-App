@@ -115,8 +115,8 @@ const TestHD = () => {
             </div>
             <div>
               <audio id="audio-element" key={testAudio[randomIndexHD].audioSrcEN}>
-                <source src="/assets/audio-hearing-test/en/houseEN.mp3" type="audio/mp3"></source>
-              </audio>
+                <source src={testAudio[randomIndexHD].audioSrcEN} type="audio/mp3"></source>
+              </audio>4
             </div>
           </div>
         ) : (
