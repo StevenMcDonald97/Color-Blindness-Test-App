@@ -1,24 +1,42 @@
 import React from "react";
 import "../App.css";
+import cbContents from "data/cbContents";
+import Section from "components/Section";
 
 const AboutCB = () => {
   return (
     <div className="main">
-      <div className="header-container">
-        <div className="headline-text">
-          <div className="headline-title">COLOR BLINDNESS</div>
-          <div className="headline-subtitle">
-            Have no fear,
-            <br />
-            you only see things differently.
-          </div>
-        </div>
-      </div>
+      <div className="header-container"></div>
 
-      <div className="content-wrapper">
-        <div className="headline-container">
-          <div className="headline-image"></div>
-        </div>
+      <div className="content-section">
+        {cbContents
+          .filter((content) => content.filter === "about")
+          .map((info, i) => (
+            <div>
+              <Section key={i} title={info.title} description={info.infos} />
+              {/* <img src={info.image} alt={info.altImage}/> */}
+            </div>
+          ))}
+      </div>
+      <div className="content-section">
+        {cbContents
+          .filter((content) => content.filter === "types")
+          .map((info, i) => (
+            <div>
+              <Section key={i} title={info.title} description={info.infos} />
+              {/* <img src={info.image} alt={info.altImage}/> */}
+            </div>
+          ))}
+      </div>
+      <div className="content-section">
+        {cbContents
+          .filter((content) => content.filter === "test")
+          .map((info, i) => (
+            <div>
+              <Section key={i} title={info.title} description={info.infos} />
+              {/* <img src={info.image} alt={info.altImage}/> */}
+            </div>
+          ))}
       </div>
     </div>
   );

@@ -20,8 +20,12 @@ const MainPage = () => {
           <div className="headline-subtitle">bla bla bla bla bla</div>
           <div className="headline-subtitle">bla bla bla bla bla</div>
           <div className="CPA-container">
-            <div className="CFA">More on Color Blindness</div>
-            <div className="CFA">More on Hearing Disability</div>
+            <div className="CFA">
+              <a href="/about-color-blind">More on Color Blindness</a>
+            </div>
+            <div className="CFA">
+              <a href="/about-hearing-disability">More on Hearing Disability</a>
+            </div>
           </div>
         </div>
       </div>
