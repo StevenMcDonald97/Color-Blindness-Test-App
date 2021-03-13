@@ -4,7 +4,7 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import testAudioOriginal from "data/testDataHD";
 import testDataHD from "data/testDataHD";
-
+// const audioFiles = require.context("../../public/audio", false);
 
 const TestHD = () => {
   const [randomIndexHD, setRandomIndexHD] = useState(0);
@@ -90,8 +90,8 @@ const TestHD = () => {
               </div>
             </div>
             <div className="pad-container">
-              {testDataHD.map((pad) => (
-                <div className={`pad ${selectedAnswer === pad.answer ? "selected" : ""}`}>
+              {testDataHD.map((pad,index) => (
+                <div key={index} className={`pad ${selectedAnswer === pad.answer ? "selected" : ""}`}>
                   <img
                     src={pad.imgSrc}
                     alt={pad.alt}
