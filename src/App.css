@@ -206,12 +206,17 @@ input {
   width: auto;
 }
 
+.start-button{
+  width:100px;
+  margin: 7px auto !important;
+}
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 7px 10px;
-  width: 90px;
+  /*width: 90px;*/
   font-weight: bold;
   border-radius: 4px;
   margin: 7px;
