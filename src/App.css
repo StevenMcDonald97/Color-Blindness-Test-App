@@ -2,6 +2,7 @@
 .content-section {
   display: grid;
   place-items: center;
+  white-space: pre-wrap;
 }
 
 .content-wrapper {

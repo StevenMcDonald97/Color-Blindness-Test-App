@@ -124,7 +124,18 @@ const TestHD = () => {
                     {hdContents
                       .filter((content) => content.filter === "test")
                       .map((info, i) => (
-                        <Section key={i} title={info.title} description={info.infos} />
+                        <div>
+                          <Section key={i} title={info.title} description={info.infos} />
+                        </div>
+                      ))}
+                  </div>
+                  <div className="content-section">
+                    {hdContents
+                      .filter((content) => content.filter === "instructions")
+                      .map((info, i) => (
+                        <div>
+                          <Section key={i} title={info.title} description={info.infos} />
+                        </div>
                       ))}
                   </div>
                 </div>
