@@ -2,50 +2,59 @@ import React, { useEffect, useState } from "react";
 import Slider from '@material-ui/core/Slider';
 import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
-import testAudioOriginal from "data/testDataHD";
-import testDataHD from "data/testDataHD";
-import hdContents from "data/hdContents"
+import testAudioOriginal from "data/testPitchs";
+import hdContents from "data/pitchContents"
 import Section from "components/Section"
 
 // const englishAudio = require.context("../../public/all-audio/English", false);
 // const hindiAudio = require.context("../../public/all-audio/hindi", false);
 // const kannadaAudio = require.context("../../public/all-audio/Kannada", false);
 
-const TestHD = () => {
-  const [randomIndexHD, setRandomIndexHD] = useState(0);
-  const [language, setLanguage] = useState("audioSrcEN");
+const TestPitch = () => {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [showTest, setShowTest] = useState(false);
-  const [HideLangSelect, setHideLangSelect] = useState(false);
   const [testAudio, setTestAudio] = useState([...testAudioOriginal]);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-  const [value, setValue] = useState(30);
+  const [value, setValue] = useState(25);
   const [audio, setAudio] = useState(null);
+  const [playTime, setPlayTime] = useState(0);
+  const [notSelected, setNotSelected] = useState(true);
 
-  useEffect(() => setAudio(document.getElementById("audio-element")), [randomIndexHD, language, score, value, audio]);
+  useEffect(() => setAudio(document.getElementById("audio-element")), [score, value, audio, testAudio, playTime]);
 
-  const playAudio = () => {   
-    audio.volume = value/100.0;
-    // console.log(audio.volume);
-    audio.play();
+  const playAudio = () => {
+    let timeout = 100*(Math.floor(Math.random() * 45) + 20);
+    console.log(timeout);
+    setTimeout(function () {
+      var d = new Date();
+      setPlayTime(d.getTime());
+      audio.volume = value/100.0;
+      audio.play();
+    }, timeout); 
+
   };
 
   const checkAnswer = () => {
-    if (selectedAnswer !== "" && selectedAnswer === testAudio[randomIndexHD].answer) {
+    setNotSelected(false);
+    var d = new Date();
+    var clickTime=d.getTime();
+    if (clickTime-playTime < 1500 && clickTime>playTime){
       setScore(score + 1);
+      console.log("yes");
     } else {
       setScore(score + 0);
+      console.log("no");
+      console.log("click time: "+clickTime);
+      console.log("play time: "+playTime);
     };
-    // console.log(score)
   }
 
   const nextTestAudio = () => {
+    setNotSelected(true);
     let currentAudioArray = testAudio;
     if (currentAudioArray.length > 1) {
-      currentAudioArray.splice(randomIndexHD, 1);
+      currentAudioArray.splice(0, 1);
       setTestAudio(currentAudioArray);
-      setRandomIndexHD(Math.floor(Math.random() * testAudio.length));
     } else {
       setShowScore(true);
       setTestAudio([...testAudioOriginal]);
@@ -56,31 +65,28 @@ const TestHD = () => {
     setShowTest(true);
   }
 
-  const selectLanguage = (lang) => {
-    setHideLangSelect(true);
-    setLanguage(lang);
-  }
-
   const submitAnswer = () => {
     audio.pause();
     checkAnswer();
-    nextTestAudio()
+    nextTestAudio();
+  }
+
+  const passOnAnswer = () => {
+    audio.pause();
+    setPlayTime(0);
+    setScore(score + 0);
+    nextTestAudio();
   }
 
   const resetTest = () => {
-    setRandomIndexHD(0);
+    setNotSelected(true);
     setScore(0);
     setShowTest(false);
-    setHideLangSelect(false);
     setShowScore(false);
     setTestAudio([...testAudioOriginal]);
     setAudio(document.getElementById("audio-element"));
   }
 
-  const handleToggle = (answer) => {
-    setSelectedAnswer(answer);
-    // console.log(answer);
-  }
 
   const handleVolumeChange = (event, newValue) => {
     setValue(newValue);
@@ -105,20 +111,6 @@ const TestHD = () => {
                     >
                       Start Test
                     </div>
-                  </div>
-                  <div className="content-section ">
-                    {hdContents
-                      .filter((content) => content.filter === "about")
-                      .map((info, i) => (
-                        <Section key={i} title={info.title} description={info.infos} />
-                      ))}
-                  </div>
-                  <div className="content-section">
-                    {hdContents
-                      .filter((content) => content.filter === "types")
-                      .map((info, i) => (
-                        <Section key={i} title={info.title} description={info.infos} />
-                      ))}
                   </div>
                   <div className="content-section">
                     {hdContents
@@ -150,76 +142,17 @@ const TestHD = () => {
                   </div>
                 </div>
                 <div>
-                  <audio id="audio-element" key={testAudio[randomIndexHD][language]}>
-                    <source src={testAudio[randomIndexHD][language]} type="audio/mp3"></source>
+                  <audio id="audio-element" key={testAudio[0]["file"]}>
+                    <source src={testAudio[0]["file"]} type="audio/mp3"></source>
                   </audio>
                 </div>
               </div>
-          ) : HideLangSelect === false ? (
-            <div className="test-content">
-              <div className="section-description">
-                Select A Langugage:
-              </div>
-              <div className="buttons-container">
-                <div
-                  className="button"
-                  name="English"
-                  onClick={
-                    ()=>selectLanguage("audioSrcEN")
-                  }
-                >
-                  English
-                </div>
-                <div
-                  className="button"
-                  name="Hindi"
-                  onClick={
-                    ()=>selectLanguage("audioSrcHI")
-                  }
-                >
-                  Hindi
-                </div>
-                <div
-                  className="button"
-                  name="Kannada"
-                  onClick={
-                    ()=>selectLanguage("audioSrcKA")
-                  }
-                >
-                  Kannada
-                </div>
-
-                <div
-                  className="button"
-                  name="Tamil"
-                  onClick={
-                    ()=>selectLanguage("audioSrcTM")
-                  }
-                >
-                  Tamil
-                </div>
-                <div
-                  className="button"
-                  name="Telugu"
-                  onClick={
-                    ()=>selectLanguage("audioSrcTE")
-                  }
-                >
-                  Telugu
-                </div>
-              </div>
-              <div>
-                <audio id="audio-element" key={testAudio[randomIndexHD][language]}>
-                  <source src={testAudio[randomIndexHD][language]} type="audio/mp3"></source>
-                </audio>
-              </div>
-            </div>
           ) : showScore === false ? (
               <div className="test-content">
                 <div className="section-description">
-                  Press the play button, listen to the word and press the correct
-                  picture of the word.
+                  Press the play button, listen for a tone and press the submit button when you hear the tone. The tone will play within 8 seconds.
                 </div>
+                <div className="section-header"> {testAudio[0]["pitch"]} </div>
                 <div className="buttons-container">
                   <div className="button" onClick={playAudio}>
                     Play
@@ -231,20 +164,15 @@ const TestHD = () => {
                     {value}
                   </div>
                 </div>
-                <div className="pad-container">
-                  {testDataHD.map((pad,index) => (
-                    <div key={index} className={`pad ${selectedAnswer === pad.answer ? "selected" : ""}`}>
-                      <img
-                        src={pad.imgSrc}
-                        alt={pad.alt}
-                        onClick={() => {
-                          handleToggle(pad.answer);
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
                 <div className="buttons-container">
+                  <div
+                    className="button"
+                    onClick={() => {
+                      passOnAnswer();
+                    }}
+                  >
+                    Didn't hear
+                  </div>
                   <div
                     className="button"
                     onClick={() => {
@@ -255,8 +183,8 @@ const TestHD = () => {
                   </div>
                 </div>
                 <div>
-                  <audio id="audio-element" key={testAudio[randomIndexHD][language]}>
-                    <source src={testAudio[randomIndexHD][language]} type="audio/mp3"></source>
+                  <audio id="audio-element" key={testAudio[0]["file"]}>
+                    <source src={testAudio[0]["file"]} type="audio/mp3"></source>
                   </audio>
                 </div>
               </div>
@@ -278,4 +206,4 @@ const TestHD = () => {
   );
 };
 
-export default TestHD;
+export default TestPitch;
