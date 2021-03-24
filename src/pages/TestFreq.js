@@ -20,11 +20,10 @@ const TestPitch = () => {
   const [playTime, setPlayTime] = useState(0);
   const [notSelected, setNotSelected] = useState(true);
 
-  useEffect(() => setAudio(document.getElementById("audio-element")), [score, value, audio, testAudio, playTime]);
+  useEffect(() => setAudio(document.getElementById("audio-element")), [notSelected, score, value, audio, testAudio, playTime]);
 
   const playAudio = () => {
     let timeout = 100*(Math.floor(Math.random() * 45) + 20);
-    console.log(timeout);
     setTimeout(function () {
       var d = new Date();
       setPlayTime(d.getTime());
@@ -40,12 +39,8 @@ const TestPitch = () => {
     var clickTime=d.getTime();
     if (clickTime-playTime < 1500 && clickTime>playTime){
       setScore(score + 1);
-      console.log("yes");
     } else {
       setScore(score + 0);
-      console.log("no");
-      console.log("click time: "+clickTime);
-      console.log("play time: "+playTime);
     };
   }
 
@@ -55,6 +50,7 @@ const TestPitch = () => {
     if (currentAudioArray.length > 1) {
       currentAudioArray.splice(0, 1);
       setTestAudio(currentAudioArray);
+      console.log(currentAudioArray[0]);
     } else {
       setShowScore(true);
       setTestAudio([...testAudioOriginal]);
@@ -72,6 +68,8 @@ const TestPitch = () => {
   }
 
   const passOnAnswer = () => {
+    console.log("clicked");
+    setNotSelected(false);
     audio.pause();
     setPlayTime(0);
     setScore(score + 0);
@@ -98,7 +96,7 @@ const TestPitch = () => {
       <div className="content-wrapper">
         {/*Choose Languages Section before entering the test */}
         
-        <div className="section-header">Hearing Test</div>
+        <div className="section-header">Hearing Frequency Test</div>
         { showTest === false ?
           (   <div className="test-content">
                 <div className="section-description">
@@ -179,7 +177,7 @@ const TestPitch = () => {
                       submitAnswer();
                     }}
                   >
-                    Submit
+                    Heard
                   </div>
                 </div>
                 <div>

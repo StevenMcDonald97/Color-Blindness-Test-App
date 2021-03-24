@@ -4,8 +4,14 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import testAudioOriginal from "data/testDataHD";
 import testDataHD from "data/testDataHD";
-import hdContents from "data/hdContents"
-import Section from "components/Section"
+import hdContents from "data/hdContents";
+import Section from "components/Section";
+import englishIcon from "../assets/language-icons/English.JPG";
+import hindiIcon from "../assets/language-icons/Hindi.JPG";
+import kannadaIcon from "../assets/language-icons/Kannada.JPG";
+import tamilIcon from "../assets/language-icons/Tamil.JPG";
+import teluguIcon from "../assets/language-icons/Telugu.JPG";
+
 
 // const englishAudio = require.context("../../public/all-audio/English", false);
 // const hindiAudio = require.context("../../public/all-audio/hindi", false);
@@ -162,50 +168,52 @@ const TestHD = () => {
               </div>
               <div className="buttons-container">
                 <div
-                  className="button"
+                  className="language-button"
                   name="English"
                   onClick={
                     ()=>selectLanguage("audioSrcEN")
                   }
                 >
-                  English
+                  <img className="language-icon" alt="english icon" src={englishIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Hindi"
                   onClick={
                     ()=>selectLanguage("audioSrcHI")
                   }
                 >
-                  Hindi
+                  <img className="language-icon" alt="hindi icon" src={hindiIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Kannada"
                   onClick={
                     ()=>selectLanguage("audioSrcKA")
                   }
                 >
-                  Kannada
+                  <img className="language-icon" alt="kannadaicon" src={kannadaIcon}/>
                 </div>
-
+              </div>
+              <div className="line-break"></div>
+              <div className="buttons-container">
                 <div
-                  className="button"
+                  className="language-button"
                   name="Tamil"
                   onClick={
                     ()=>selectLanguage("audioSrcTM")
                   }
                 >
-                  Tamil
+                  <img className="language-icon" alt="tamil icon"src={tamilIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Telugu"
                   onClick={
                     ()=>selectLanguage("audioSrcTE")
                   }
                 >
-                  Telugu
+                  <img className="language-icon" alt="telugu icon" src={teluguIcon}/>
                 </div>
               </div>
               <div>
