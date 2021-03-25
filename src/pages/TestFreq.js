@@ -37,7 +37,7 @@ const TestPitch = () => {
     setNotSelected(false);
     var d = new Date();
     var clickTime=d.getTime();
-    if (clickTime-playTime < 1500 && clickTime>playTime){
+    if (clickTime-playTime < 2000 && clickTime>playTime){
       setScore(score + 1);
     } else {
       setScore(score + 0);
@@ -50,7 +50,6 @@ const TestPitch = () => {
     if (currentAudioArray.length > 1) {
       currentAudioArray.splice(0, 1);
       setTestAudio(currentAudioArray);
-      console.log(currentAudioArray[0]);
     } else {
       setShowScore(true);
       setTestAudio([...testAudioOriginal]);
@@ -68,7 +67,6 @@ const TestPitch = () => {
   }
 
   const passOnAnswer = () => {
-    console.log("clicked");
     setNotSelected(false);
     audio.pause();
     setPlayTime(0);
