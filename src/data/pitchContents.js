@@ -2,9 +2,9 @@ const hdContents = [
 
      {
           filter: "test",
-          title: "About Frequency/Pitch Test",
+          title: "About this Test",
           infos: [ 	
-               "With this online hearing test you can find out if there are frequencies you cannot hear. The purpose of this free online hearing test is to pinpoint your hearing challenges. By testing your ability to hear different frequencies, we will be able to determine whether or not you should consult a hearing care professional. This test is a self-assessment tool to measure hearing difficulties and problems. This test is for informational purposes only. If you believe you may have a hearing impairment please consult an ENT Doctor or Otolaryngologist. Results may vary depending on many factors including the type and quality of your device display and the noise in your surroundings.",                                    
+               "With this online hearing test you can find out if there are frequency ranges you cannot hear. During the test you will be asked if you can hear tones at 250, 500, 1000, 2000, 3000, 4000, and 8000HZ. If you cannot hear any of these frequencies, you may want to consult a hearing care professional. This test is a self-assessment tool to measure hearing difficulties and problems. This test is for informational purposes only and cannot diagnose hearing disorders by itself. If you believe you may have a hearing impairment please consult an ENT Doctor or Otolaryngologist. Results may vary depending on many factors including the type and quality of your device audio and the noise in your surroundings.",                                    
           ]
      },
      {
@@ -19,9 +19,11 @@ const hdContents = [
                "4. Once you’re relaxed and confident in your surroundings, feel free to begin",
 
                "Taking the Test: ",
-               "1.Hit the play button and listen to the audio",
-               "2.When you hear the tone, click the Submit button",
-               "4.After you submit, a new audio will be loaded. Repeat the above steps until you recieve a score"
+               "1.Hit the play button and listen for the tone. It will play at some point in 10 seconds",
+               "2.When you hear the tone, click the 'Heard' button. If after 10 seconds you have not heard the tone, click 'Didn't Hear' instead.",
+               "3. When you click either 'Heard' or 'Didn't hear' the next audio will be loaded.", 
+               "4. If you need to, adjust the volume of the tone to a more comfortable level. Try to keep it at the lowest level where you can still hear the tones.",
+               "5. Repeat the above steps until you recieve a score"
           ]
      }
 ]

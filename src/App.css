@@ -232,6 +232,10 @@ input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
 }
 
+.button:active {
+  background-color: var(--extra-dark-teal);
+}
+
 .language-button {
   display: flex;
   justify-content: center;

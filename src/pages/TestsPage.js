@@ -64,8 +64,8 @@ const TestsPage = () => {
                 aria-label="simple tabs example"
               >
                 <Tab label="Color Blind Test" {...a11yProps(0)} />
-                <Tab label="Hearing Test" {...a11yProps(1)} />
-                <Tab label="Frequency Test" {...a11yProps(2)} />
+                <Tab label="Hearing Test #1" {...a11yProps(1)} />
+                <Tab label="Hearing Test #2" {...a11yProps(2)} />
               </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>

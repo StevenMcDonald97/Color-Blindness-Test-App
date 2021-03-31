@@ -15,7 +15,7 @@ const TestPitch = () => {
   const [showScore, setShowScore] = useState(false);
   const [showTest, setShowTest] = useState(false);
   const [testAudio, setTestAudio] = useState([...testAudioOriginal]);
-  const [value, setValue] = useState(25);
+  const [value, setValue] = useState(20);
   const [audio, setAudio] = useState(null);
   const [playTime, setPlayTime] = useState(0);
   const [notSelected, setNotSelected] = useState(true);
@@ -37,7 +37,8 @@ const TestPitch = () => {
     setNotSelected(false);
     var d = new Date();
     var clickTime=d.getTime();
-    if (clickTime-playTime < 2000 && clickTime>playTime){
+    // SET TIME T CLICK HEARD HERE
+    if (clickTime-playTime < 5000 && clickTime>playTime){
       setScore(score + 1);
     } else {
       setScore(score + 0);
@@ -46,6 +47,7 @@ const TestPitch = () => {
 
   const nextTestAudio = () => {
     setNotSelected(true);
+    setPlayTime(playTime-6000);
     let currentAudioArray = testAudio;
     if (currentAudioArray.length > 1) {
       currentAudioArray.splice(0, 1);
@@ -94,7 +96,7 @@ const TestPitch = () => {
       <div className="content-wrapper">
         {/*Choose Languages Section before entering the test */}
         
-        <div className="section-header">Hearing Frequency Test</div>
+        <div className="section-header">Hearing Test for Frequencies</div>
         { showTest === false ?
           (   <div className="test-content">
                 <div className="section-description">
@@ -113,7 +115,7 @@ const TestPitch = () => {
                       .filter((content) => content.filter === "test")
                       .map((info, i) => (
                         <div>
-                          <Section key={i} title={info.title} description={info.infos} />
+                          <Section key={`test-${i}`} title={info.title} description={info.infos} />
                         </div>
                       ))}
                   </div>
@@ -122,7 +124,7 @@ const TestPitch = () => {
                       .filter((content) => content.filter === "instructions")
                       .map((info, i) => (
                         <div>
-                          <Section key={i} title={info.title} description={info.infos} />
+                          <Section key={`instructions-${i}`} title={info.title} description={info.infos} />
                         </div>
                       ))}
                   </div>
@@ -146,7 +148,9 @@ const TestPitch = () => {
           ) : showScore === false ? (
               <div className="test-content">
                 <div className="section-description">
-                  Press the play button, listen for a tone and press the submit button when you hear the tone. The tone will play within 8 seconds.
+                  <p>Press the play button and listen for a tone. Press "Heard" if you hear it, or press "Didn't hear" if you do not hear after 10 seconds.</p> 
+                  <p>If you need to you can adjust the volume to a more comfortable level.</p>
+                  <p><b> When you click either "Didn't Hear" or "Heard" the next audio will be loaded and you will need to press play again.</b></p>
                 </div>
                 <div className="section-header"> {testAudio[0]["pitch"]} </div>
                 <div className="buttons-container">
