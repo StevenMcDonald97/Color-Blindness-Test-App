@@ -212,7 +212,7 @@ const TestHD = () => {
               <div className="test-content">
                 <div className="section-description">
                   Press the play button, listen to the word and press the correct
-                  picture of the word.
+                  picture of the word. Then click submit. <b> When you submit, a new word will be loaded and you will need to click play again </b>
                 </div>
                 <div className="buttons-container">
                   <div className="button" onClick={playAudio}>

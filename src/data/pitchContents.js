@@ -4,7 +4,7 @@ const hdContents = [
           filter: "test",
           title: "About this Test",
           infos: [ 	
-               "With this online hearing test you can find out if there are frequency ranges you cannot hear. During the test you will be asked if you can hear tones at 250, 500, 1000, 2000, 3000, 4000, and 8000HZ. If you cannot hear any of these frequencies, you may want to consult a hearing care professional. This test is a self-assessment tool to measure hearing difficulties and problems. This test is for informational purposes only and cannot diagnose hearing disorders by itself. If you believe you may have a hearing impairment please consult an ENT Doctor or Otolaryngologist. Results may vary depending on many factors including the type and quality of your device audio and the noise in your surroundings.",                                    
+               "With this online hearing test you can find out if there are frequency ranges you cannot hear. During the test you will be asked if you can hear tones at 250, 500, 1000, 2000, 3000, 4000, and 8000HZ. This test is a self-assessment tool to measure hearing difficulties and problems. This test is for informational purposes only and cannot diagnose hearing disorders by itself. If you believe you may have a hearing impairment please consult an ENT Doctor or Otolaryngologist. Results may vary depending on many factors including the type and quality of your device audio and the noise in your surroundings.",                                    
           ]
      },
      {
