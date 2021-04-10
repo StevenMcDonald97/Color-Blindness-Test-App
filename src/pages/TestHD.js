@@ -104,6 +104,7 @@ const TestHD = () => {
                 <div className="section-description">
                   <div className="buttons-container">
                     <div
+                      key ="hearingTestStart"
                       className="button start-button"
                       onClick={() => {
                         startTest();

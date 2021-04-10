@@ -27,7 +27,7 @@ const MainPage = () => {
       </div>
 
       <div className="content-section">
-        <span style={{height: '80vh'}}></span>
+        <span style={{height: '40vh'}}></span>
       </div>
 
       <div className="footer">
