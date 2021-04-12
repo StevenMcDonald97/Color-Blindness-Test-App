@@ -46,7 +46,7 @@ const MenuLink = () => {
         </span>
         <span>
           <Button style={styles.link}>
-            <NavLink exact to="/about-us" activeStyle={styles.activeLink}>
+            <NavLink exact to="/about-team" activeStyle={styles.activeLink}>
               TEAM
             </NavLink>
           </Button>

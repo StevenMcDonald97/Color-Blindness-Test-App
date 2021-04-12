@@ -16,7 +16,7 @@ const AboutCB = () => {
           .map((info, i) => (
             <div className='gridThree-2x1'>
               <Section key={i} className='about-sectionCB' title={info.title} description={info.infos} />
-              <img className='about-imageCB' src={info.image} alt={info.altImage} style={{ float: 'right'}}/>
+              <img className='about-imageCB' src={info.image} alt={info.altImage} style={{width: '30%', float: 'right'}}/>
             </div>
           ))}
       </div>

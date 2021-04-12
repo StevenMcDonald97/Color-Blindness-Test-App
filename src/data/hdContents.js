@@ -40,6 +40,25 @@ const hdContents = [
     image: babyMusic,
     altImage: "Baby wearing headphones and smiling.",
   },
+  {
+    filter: "instructions",
+    title: "Instructions",
+    infos: [
+         "Before taking this online test you should:",
+
+         "1. Set up somewhere quiet - a loud and busy room will make it much harder to hear properly and get accurate results",
+         "2. Decide between speakers or headphones - we recommend headphones, as these will test your right and left ears individually",
+         "3. Turn the volume to a level where it’s comfortable for you",
+         "4. Once you’re relaxed and confident in your surroundings, feel free to begin",
+
+         "Taking the Test: ",
+         "1.Hit the play button and listen to the audio",
+         "2.Select the icon that matches the word you hear",
+         "3.After you select the icon, click submit",
+         "4.After you submit, a new audio will be loaded. Repeat the above steps until you recieve a score"
+    ]
+},
+
 ];
 
 export default hdContents;
