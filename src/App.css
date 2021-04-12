@@ -77,6 +77,19 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.gridTwo-2x1 {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-gap: 1.5rem;
+  margin: 1rem;
+}
+
+.gridThree-2x1 {
+  display: grid;
+  grid-template-columns: 10fr 8fr;
+  grid-gap: 10rem;
+}
+
 .header-half {
   display: grid;
   width: 100%;
@@ -187,6 +200,17 @@
 .icon:hover {
   border: 0.5px solid var(--teal);
   background-color: var(--teal);
+}
+
+/* ABOUT DISABILITIES PAGE */
+.about-imageCB {
+  margin-right: 1rem;
+  width: 80%;
+}
+
+.about-sectionCB {
+  display: flex;
+  align-content: left;
 }
 
 /*  TESTPAGE - TestPage.js (TestCB.js + TestHD.js)*/
