@@ -324,3 +324,27 @@ input[type='number'] {
 .selected {
   border: 2px solid var(--teal);
 }
+
+.neo-about, .kavitha-about, .steven-about, .joey-about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10rem;
+  width: stretch;
+  place-items: center;
+}
+
+.neo-about p, .kavitha-about p, .steven-about p, .joey-about p {
+  display: grid;
+  align-self: start;
+}
+
+.aboutTeam {
+  background-image: linear-gradient(to right bottom, white 25%,  rgba(0, 0, 0, 0.5));
+  padding: 1rem;
+
+}
+
+.neo-about img, .kavitha-about img, .steven-about img, .joey-about img {
+  border: 5px var(--dark-teal) solid;
+  border-radius: 5px;
+}
