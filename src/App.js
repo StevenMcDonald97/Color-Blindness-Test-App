@@ -7,6 +7,7 @@ import AboutHD from "pages/AboutHD";
 import TestsPage from "pages/TestsPage";
 import ContactPage from "pages/ContactPage";
 import MenuLink from "components/MenuLink"
+import AboutTeam from "pages/AboutTeam";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
       <Switch>
         <Route exact path="/">
           <MainPage />
+        </Route>
+
+        <Route exact path="/about-team">
+          <AboutTeam />
         </Route>
 
         <Route exact path="/about-color-blind">

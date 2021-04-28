@@ -58,7 +58,7 @@ const MenuLink = () => {
       fontSize: 14,    
     },
   };
-
+  
   if (width > 492){
     return (
       <div className="navbar">

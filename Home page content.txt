@@ -1,0 +1,18 @@
+
+
+Goal
+
+We set out to provide easily accessible hearing and sight tests for rural populations in 
+India who have limited access to medical care. The idea was that by making a lightweight, 
+front-end only application it could be taken by health groups into rural areas without needing 
+expensive equipment or having people come to cities to be tested. This is not the first test of 
+this kind, but it is the first to be translated into Hindi, Kannada, Telugu, and Tamil so that it's 
+easily accessible to the people living in the rural areas of India. 
+
+
+Testing Idea
+	 
+The three things we made tests for are color blindness, hearing loss, and hearing 
+sensitivity to different frequencies. These are a few of the most common problems people may 
+have with seeing and hearing, and helping people diagnose issues can dramatically improve 
+their quality of life. Each test we made was based on existing medical tests for the same issue. 

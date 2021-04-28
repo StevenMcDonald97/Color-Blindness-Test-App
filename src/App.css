@@ -77,6 +77,19 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.gridTwo-2x1 {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-gap: 1.5rem;
+  margin: 1rem;
+}
+
+.gridThree-2x1 {
+  display: grid;
+  grid-template-columns: 10fr 8fr;
+  grid-gap: 10rem;
+}
+
 .header-half {
   display: grid;
   width: 100%;
@@ -187,6 +200,17 @@
 .icon:hover {
   border: 0.5px solid var(--teal);
   background-color: var(--teal);
+}
+
+/* ABOUT DISABILITIES PAGE */
+.about-imageCB {
+  margin-right: 1rem;
+  width: 80%;
+}
+
+.about-sectionCB {
+  display: flex;
+  align-content: left;
 }
 
 /*  TESTPAGE - TestPage.js (TestCB.js + TestHD.js)*/
@@ -336,6 +360,30 @@ input[type='number'] {
 }
 
 
+.neo-about, .kavitha-about, .steven-about, .joey-about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10rem;
+  width: stretch;
+  place-items: center;
+}
+
+.neo-about p, .kavitha-about p, .steven-about p, .joey-about p {
+  display: grid;
+  align-self: start;
+}
+
+.aboutTeam {
+  background-image: linear-gradient(to right bottom, white 25%,  rgba(0, 0, 0, 0.5));
+  padding: 1rem;
+
+}
+
+.neo-about img, .kavitha-about img, .steven-about img, .joey-about img {
+  border: 5px var(--dark-teal) solid;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 492px) {
   .header-CPA-container{
     position:relative;
@@ -464,3 +512,4 @@ input[type='number'] {
 
 
 }
+

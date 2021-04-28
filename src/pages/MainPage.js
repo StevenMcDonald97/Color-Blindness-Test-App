@@ -15,19 +15,39 @@ const MainPage = () => {
         <div className="header-half">
           <img src={header2} alt="headphones" />
         </div>
-        <div className="header-CPA-container">
-          <div className="header-headline">Welcome to .....</div>
-          <div className="headline-subtitle">bla bla bla bla bla</div>
-          <div className="headline-subtitle">bla bla bla bla bla</div>
-          <div className="CPA-container">
-            <div className="CFA">More on Color Blindness</div>
-            <div className="CFA">More on Hearing Disability</div>
-          </div>
-        </div>
       </div>
 
       <div className="content-section">
-        <span style={{height: '40vh'}}></span>
+        <span style={{ height: "40vh" }}>
+          <div className="content-container gridTwo-2x1">
+            <div className="content3">
+            <h2>Goal</h2>
+            <p>
+              We set out to provide easily accessible hearing and sight tests
+              for rural populations in India who have limited access to medical
+              care. The idea was that by making a lightweight, front-end only
+              application it could be taken by health groups into rural areas
+              without needing expensive equipment or having people come to
+              cities to be tested. This is not the first test of this kind, but
+              it is the first to be translated into Hindi, Kannada, Telugu, and
+              Tamil so that it's easily accessible to the people living in the
+              rural areas of India.
+            </p>
+            </div>
+            <div className='content4'>
+            <h2>Testing Idea</h2>
+            <p>
+              The three things we made tests for are color blindness, hearing
+              loss, and hearing sensitivity to different frequencies. These are
+              a few of the most common problems people may have with seeing and
+              hearing, and helping people diagnose issues can dramatically
+              improve their quality of life. Each test we made was based on
+              existing medical tests for the same issue.
+            </p>
+
+            </div>
+          </div>
+        </span>
       </div>
 
       <div className="footer">
@@ -55,8 +75,9 @@ const MainPage = () => {
             </a>
           </div>
           <div className="footer-description">
-            Finely tuned by Kavitha and Neo Hsueh Yen <br />
-            Credits: Icons made by Freepik from www.flaticon.com
+            Finely Tuned by Kavitha Krishnamurthy, Neo Hsueh Yen, Steven McDonald, and Joey Bruno 
+            <br />
+            Credits: Icons Made by Freepik from www.flaticon.com
           </div>
         </div>
       </div>
