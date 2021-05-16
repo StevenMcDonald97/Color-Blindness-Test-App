@@ -1,4 +1,5 @@
 import React from "react";
+import stevenPhoto from "../assets/about-images/steven-photo.jpg";
 import kavithaPhoto from "../assets/about-images/kavitha-photo.jpg";
 import joeyPhoto from "../assets/about-images/professional-joey-photo.jpg";
 
@@ -46,7 +47,12 @@ const AboutTeam = () => {
           chance to use my programming skills to help people and have a positive
           impact on the world.
         </p>
-        <img src="https://via.placeholder.com/300.jpg" alt="Placeholder" />
+        <img
+          src={stevenPhoto}
+          alt="Steven McDonald"
+          width="300"
+          height="300"
+        />
       </div>
 
       <div>
