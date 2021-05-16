@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TestCB from "./TestCB";
 import TestHD from "./TestHD";
+import TestFreq from "./TestFreq";
 
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -63,7 +64,8 @@ const TestsPage = () => {
                 aria-label="simple tabs example"
               >
                 <Tab label="Color Blind Test" {...a11yProps(0)} />
-                <Tab label="Hearing Test" {...a11yProps(1)} />
+                <Tab label="Hearing Test #1" {...a11yProps(1)} />
+                <Tab label="Hearing Test #2" {...a11yProps(2)} />
               </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
@@ -71,6 +73,9 @@ const TestsPage = () => {
             </TabPanel>
             <TabPanel value={value} index={1}>
               <TestHD />
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <TestFreq />
             </TabPanel>
           </div>
         </div>

@@ -50,7 +50,6 @@ const TestCB = () => {
       currentCardArray.splice(randomIndexCB, 1);
       setTestCards(currentCardArray);
       setRandomIndexCB(Math.floor(Math.random() * testCards.length));
-      console.log(testCards);
     } else {
       setShowScore(true);
       setTestCards([...testCardsOriginal]);
