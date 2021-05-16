@@ -21,7 +21,7 @@ const MainPage = () => {
         <span style={{ height: "40vh" }}>
           <div className="content-container gridTwo-2x1">
             <div className="content3">
-            <h3>Goal</h3>
+            <h2>Goal</h2>
             <p>
               We set out to provide easily accessible hearing and sight tests
               for rural populations in India who have limited access to medical
@@ -35,7 +35,7 @@ const MainPage = () => {
             </p>
             </div>
             <div className='content4'>
-            <h3>Testing Idea</h3>
+            <h2>Testing Idea</h2>
             <p>
               The three things we made tests for are color blindness, hearing
               loss, and hearing sensitivity to different frequencies. These are
@@ -75,9 +75,9 @@ const MainPage = () => {
             </a>
           </div>
           <div className="footer-description">
-            Finely tuned by Kavitha Krishnamurthy, Neo Hsueh Yen, Steven McDonald, and Joey Bruno 
+            Finely Tuned by Kavitha Krishnamurthy, Neo Hsueh Yen, Steven McDonald, and Joey Bruno 
             <br />
-            Credits: Icons made by Freepik from www.flaticon.com
+            Credits: Icons Made by Freepik from www.flaticon.com
           </div>
         </div>
       </div>

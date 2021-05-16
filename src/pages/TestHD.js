@@ -4,8 +4,14 @@ import VolumeDown from '@material-ui/icons/VolumeDown';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import testAudioOriginal from "data/testDataHD";
 import testDataHD from "data/testDataHD";
-import hdContents from "data/hdContents"
-import Section from "components/Section"
+import hdContents from "data/hdContents";
+import Section from "components/Section";
+import englishIcon from "../assets/language-icons/English.JPG";
+import hindiIcon from "../assets/language-icons/Hindi.JPG";
+import kannadaIcon from "../assets/language-icons/Kannada.JPG";
+import tamilIcon from "../assets/language-icons/Tamil.JPG";
+import teluguIcon from "../assets/language-icons/Telugu.JPG";
+
 
 // const englishAudio = require.context("../../public/all-audio/English", false);
 // const hindiAudio = require.context("../../public/all-audio/hindi", false);
@@ -98,6 +104,7 @@ const TestHD = () => {
                 <div className="section-description">
                   <div className="buttons-container">
                     <div
+                      key ="hearingTestStart"
                       className="button start-button"
                       onClick={() => {
                         startTest();
@@ -105,20 +112,6 @@ const TestHD = () => {
                     >
                       Start Test
                     </div>
-                  </div>
-                  <div className="content-section ">
-                    {hdContents
-                      .filter((content) => content.filter === "about")
-                      .map((info, i) => (
-                        <Section key={i} title={info.title} description={info.infos} />
-                      ))}
-                  </div>
-                  <div className="content-section">
-                    {hdContents
-                      .filter((content) => content.filter === "types")
-                      .map((info, i) => (
-                        <Section key={i} title={info.title} description={info.infos} />
-                      ))}
                   </div>
                   <div className="content-section">
                     {hdContents
@@ -162,50 +155,52 @@ const TestHD = () => {
               </div>
               <div className="buttons-container">
                 <div
-                  className="button"
+                  className="language-button"
                   name="English"
                   onClick={
                     ()=>selectLanguage("audioSrcEN")
                   }
                 >
-                  English
+                  <img className="language-icon" alt="english icon" src={englishIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Hindi"
                   onClick={
                     ()=>selectLanguage("audioSrcHI")
                   }
                 >
-                  Hindi
+                  <img className="language-icon" alt="hindi icon" src={hindiIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Kannada"
                   onClick={
                     ()=>selectLanguage("audioSrcKA")
                   }
                 >
-                  Kannada
+                  <img className="language-icon" alt="kannadaicon" src={kannadaIcon}/>
                 </div>
-
+              </div>
+              <div className="line-break"></div>
+              <div className="buttons-container">
                 <div
-                  className="button"
+                  className="language-button"
                   name="Tamil"
                   onClick={
                     ()=>selectLanguage("audioSrcTM")
                   }
                 >
-                  Tamil
+                  <img className="language-icon" alt="tamil icon"src={tamilIcon}/>
                 </div>
                 <div
-                  className="button"
+                  className="language-button"
                   name="Telugu"
                   onClick={
                     ()=>selectLanguage("audioSrcTE")
                   }
                 >
-                  Telugu
+                  <img className="language-icon" alt="telugu icon" src={teluguIcon}/>
                 </div>
               </div>
               <div>
@@ -218,7 +213,7 @@ const TestHD = () => {
               <div className="test-content">
                 <div className="section-description">
                   Press the play button, listen to the word and press the correct
-                  picture of the word.
+                  picture of the word. Then click submit. <b> When you submit, a new word will be loaded and you will need to click play again </b>
                 </div>
                 <div className="buttons-container">
                   <div className="button" onClick={playAudio}>
@@ -244,7 +239,6 @@ const TestHD = () => {
                     </div>
                   ))}
                 </div>
-                <div>{randomIndexHD}  -  {testAudio[randomIndexHD][language]}</div>
                 <div className="buttons-container">
                   <div
                     className="button"
@@ -258,7 +252,7 @@ const TestHD = () => {
                 <div>
                   <audio id="audio-element" key={testAudio[randomIndexHD][language]}>
                     <source src={testAudio[randomIndexHD][language]} type="audio/mp3"></source>
-                  </audio>4
+                  </audio>
                 </div>
               </div>
           ) : (
