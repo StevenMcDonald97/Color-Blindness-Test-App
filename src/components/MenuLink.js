@@ -71,6 +71,13 @@ const MenuLink = () => {
             </Button>
           </span>
           <span>
+            <Button style={styles.link}>
+              <NavLink exact to="/about-team" activeStyle={styles.activeLink}>
+                TEAM
+              </NavLink>
+            </Button>
+          </span>
+          <span>
             <Button
               aria-haspopup="true"
               onClick={handleClick}
@@ -147,6 +154,14 @@ const MenuLink = () => {
               <li key="home">          
                 <NavLink
                   to="/"
+                  className='dropDownMenuLink'
+                >
+                  HOME
+                </NavLink>
+              </li>
+              <li key="about">          
+                <NavLink
+                  to="/about-team"
                   className='dropDownMenuLink'
                 >
                   HOME
