@@ -18,11 +18,11 @@ const MainPage = () => {
       </div>
 
       <div className="content-section">
-        <span style={{ height: "40vh" }}>
+        <span style={{ height: "45vh" }}>
           <div className="content-container gridTwo-2x1">
             <div className="content3">
             <h2>Goal</h2>
-            <p>
+            <p style={{fontSize: '1.3rem'}}>
               We set out to provide easily accessible hearing and sight tests
               for rural populations in India who have limited access to medical
               care. The idea was that by making a lightweight, front-end only
@@ -36,7 +36,7 @@ const MainPage = () => {
             </div>
             <div className='content4'>
             <h2>Testing Idea</h2>
-            <p>
+            <p style={{fontSize: '1.3rem'}}>
               The three things we made tests for are color blindness, hearing
               loss, and hearing sensitivity to different frequencies. These are
               a few of the most common problems people may have with seeing and

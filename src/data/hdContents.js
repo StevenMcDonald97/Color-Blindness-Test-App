@@ -1,5 +1,6 @@
 import babyMusic from "../assets/pageHD-images/alireza-attari-mp_FNJYcjBM-unsplash.jpg";
 import joyLife from "../assets/pageHD-images/mark-paton-Tfqx8XAgU4Q-unsplash.jpg";
+import guitar from "../assets/pageHD-images/katie-montgomery-Ln1bd3eXATU-unsplash.jpg";
 
 const hdContents = [
   {
@@ -26,6 +27,8 @@ const hdContents = [
       "Before Taking This Online Test You Should:",
       "Set up somewhere quiet - a loud and busy room will make it much harder to hear properly and get accurate results. Decide between speakers or headphones - we recommend headphones, as these will test your right and left ears individually. Turn the volume to a level where it’s comfortable for you. Once you’re relaxed and confident in your surroundings, feel free to begin.",
     ],
+    image: guitar,
+    altImage: "Head of Fender Jazzmaster guitar.",
   },
 
   {
