@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "react-fontawesome";
 import { faTools } from "@fortawesome/free-solid-svg-icons";
 
 const ContactPage = () => {
