@@ -385,7 +385,6 @@ input[type='number'] {
   width: stretch;
   place-items: center;
 }
-
 .neo-about p, .kavitha-about p, .steven-about p, .joey-about p {
   display: grid;
   align-self: start;
