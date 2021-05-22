@@ -2,13 +2,14 @@ import React from "react";
 import stevenPhoto from "../assets/about-images/steven-photo.jpg";
 import kavithaPhoto from "../assets/about-images/kavitha-photo.jpg";
 import joeyPhoto from "../assets/about-images/professional-joey-photo.jpg";
+import neoPhoto from '../assets/about-images/neoPhoto.jpg';
 
 const AboutTeam = () => {
   return (
     <div style={{ margin: "1rem 0 2rem 1rem" }} className="aboutTeam">
-      <h1 style={{ textAlign: 'center' }}>About the Team</h1>
-      
-      <div className="about-container gridFour-2x1" >
+      <h1 style={{ textAlign: "center" }}>About the Team</h1>
+
+      <div className="about-container gridFour-2x1">
         <div style={{ width: "50%" }}>
           <img
             src={kavithaPhoto}
@@ -17,35 +18,42 @@ const AboutTeam = () => {
             height="400"
           />
           <h2>Kavitha Krishnamurthy</h2>
-          <p style={{ width: "200%", fontSize: '1.3rem' }}>
+          <p style={{ width: "200%", fontSize: "1.3rem" }}>
             I live in Chennai, TamilNadu and I'm driven by my passion to build
-            and create something that will have an enduring impact on society. 
-            I believe that we are not remembered by the amount of money we have
+            and create something that will have an enduring impact on society. I
+            believe that we are not remembered by the amount of money we have
             made but rather by the lives we have changed in the process. This
             website is a passion project of mine, developed with the aim of
             creating awareness and diagnosing color blindness and hearing
-            problems among the people of India and my sincere thanks to 
-            Hsueh Yen Neo, Steven McDonald and Joey Bruno for making this possible.
+            problems among the people of India and my sincere thanks to Hsueh
+            Yen Neo, Steven McDonald and Joey Bruno for making this possible.
           </p>
         </div>
         <div style={{ width: "50%" }}>
           <img
-            src={kavithaPhoto}
-            alt="Kavitha Krishnamurthy"
+            src={neoPhoto}
+            alt="Hseuh Yen Neo"
             width="400"
             height="400"
           />
           <h2>Hsueh Yen Neo</h2>
-          <p style={{ width: "100%", fontSize: '1.3rem' }}>
-            lorem ispum lorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispum
-            lorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispum
-            lorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispumlorem ispum
+          <p style={{ width: "100%", fontSize: "1.3rem" }}>
+            I am a full-stack web application developer based in Munich,
+            Germany. I am currently working as a project lead, managing various
+            projects with tech stacks of React, PHP, JS, JQuery, Docker and
+            MySQL. While waiting for npm to install, I love drinking coffee and
+            occasionally good beer and wine when the code is being nice to me.
+            When my back hurts from sitting too long, I enjoy long walks and
+            trying out cool restaurants around Munich.
           </p>
         </div>
       </div>
 
-      <div className="about-container gridFour-2x1" style={{ margin: ".5rem 0" }}>
-        <div style={{ width: '50%' }}>
+      <div
+        className="about-container gridFour-2x1"
+        style={{ margin: ".5rem 0" }}
+      >
+        <div style={{ width: "50%" }}>
           <img
             src={stevenPhoto}
             alt="Steven McDonald"
@@ -53,7 +61,7 @@ const AboutTeam = () => {
             height="400"
           />
           <h2>Steven McDonald</h2>
-          <p style={{width: '170%', fontSize: '1.3rem'}}>
+          <p style={{ width: "170%", fontSize: "1.3rem" }}>
             I am a software engineer and a recent graduate of Cornell
             University, living in the Bay Area, California. I was drawn to this
             project by the chance to use my programming skills to help people
@@ -61,10 +69,10 @@ const AboutTeam = () => {
           </p>
         </div>
 
-        <div style={{width: '50%'}}>
+        <div style={{ width: "50%" }}>
           <img src={joeyPhoto} alt="Joey Bruno" width="400" height="400" />
           <h2>Joey Bruno</h2>
-          <p style={{width: '120%', fontSize: '1.3rem'}}>
+          <p style={{ width: "120%", fontSize: "1.3rem" }}>
             I am a Teaching Assistant for an online Digital Marketing class with
             Vanderbilt University, living in Nashville, Tennessee. I wanted to
             join the project in order to help people, by using my mixed skills
@@ -75,8 +83,8 @@ const AboutTeam = () => {
       </div>
 
       <div style={{ marginTop: "3rem" }}>
-        <h2 style={{textAlign: 'center'}}>How We Got Together</h2>
-        <p style={{fontSize: '1.3rem'}}>
+        <h2 style={{ textAlign: "center" }}>How We Got Together</h2>
+        <p style={{ fontSize: "1.3rem" }}>
           The internet is a place where anyone can meet anyone else from around
           the world. That was how our team formed, four people from different
           corners of the globe united by a common goal of making something for

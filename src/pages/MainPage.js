@@ -75,7 +75,7 @@ const MainPage = () => {
             </a>
           </div>
           <div className="footer-description">
-            Finely Tuned by Kavitha Krishnamurthy, Neo Hsueh Yen, Steven McDonald, and Joey Bruno 
+            Finely Tuned by Kavitha Krishnamurthy, Hsueh Yen Neo, Steven McDonald, and Joey Bruno 
             <br />
             Credits: Icons Made by Freepik from www.flaticon.com
           </div>
