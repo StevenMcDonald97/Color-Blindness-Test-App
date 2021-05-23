@@ -164,7 +164,7 @@ const MenuLink = () => {
                   to="/about-team"
                   className='dropDownMenuLink'
                 >
-                  HOME
+                  TEAM
                 </NavLink>
               </li>
               <li key="info">          
