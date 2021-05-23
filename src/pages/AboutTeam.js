@@ -2,7 +2,7 @@ import React from "react";
 import stevenPhoto from "../assets/about-images/steven-photo.jpg";
 import kavithaPhoto from "../assets/about-images/kavitha-photo.jpg";
 import joeyPhoto from "../assets/about-images/professional-joey-photo.jpg";
-import neoPhoto from '../assets/about-images/neoPhoto.jpg';
+import neoPhoto from '../assets/about-images/neo-profile.jpg';
 
 const AboutTeam = () => {
   return (
