@@ -18,7 +18,7 @@ const MainPage = () => {
       </div>
 
       <div className="content-section">
-        <span style={{ height: "45vh" }}>
+        <span style={{ minHeight: "45vh" }}>
           <div className="content-container gridTwo-2x1">
             <div className="content3">
             <h2>Goal</h2>
@@ -75,7 +75,7 @@ const MainPage = () => {
             </a>
           </div>
           <div className="footer-description">
-            Finely Tuned by Kavitha Krishnamurthy, Neo Hsueh Yen, Steven McDonald, and Joey Bruno 
+            Finely Tuned by Kavitha Krishnamurthy, Hsueh Yen Neo, Steven McDonald, and Joey Bruno 
             <br />
             Credits: Icons Made by Freepik from www.flaticon.com
           </div>

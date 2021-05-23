@@ -169,13 +169,20 @@ const MenuLink = () => {
               </li>
               <li key="info">          
                 <NavLink
+                  to="/about-color-blind"
+                  className='dropDownMenuLink'
+                >
+                  COLOR BLINDNESS INFORMATION
+                </NavLink>
+              </li>
+              <li key="info">          
+                <NavLink
                   to="/about-hearing-disability"
                   className='dropDownMenuLink'
                 >
-                  INFORMATION
+                  HEARING INFORMATION
                 </NavLink>
-              </li>
-              <li key="tests">   
+              </li>              <li key="tests">   
                 <NavLink
                   to="/tests"
                   className='dropDownMenuLink'

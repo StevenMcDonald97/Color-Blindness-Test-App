@@ -90,6 +90,10 @@
   grid-gap: 10rem;
 }
 
+.gridThree-2x1 img{
+  margin-top:15rem;
+}
+
 .gridFour-2x1 {
   display: grid;
   grid-template-columns: 3fr 5fr;
@@ -170,6 +174,11 @@
   width: 100%;
 }
 
+.team-header{
+  width:250px;
+  margin: 10px auto;
+}
+
 /* FOOTER */
 .footer {
   background-color: var(--dark-teal);
@@ -218,12 +227,18 @@
 }
 
 .test-imageHD {
-  transform: rotate(270deg) scale(3);
+  transform: rotate(270deg) scale(2);
   display: flex;
   align-items: flex-end;
 }
 
-.about-imageCB, .types-imageCB, .test-imageCB, .about-imageHD, .types-imageHD, .test-imageHD {
+.test-imageFreq {
+  transform: rotate(270deg) scale(4);
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-imageCB, .types-imageCB, .test-imageCB, .about-imageHD, .types-imageHD, .test-imageFreq, .test-imageHD {
   width: 80%;
 }
 
@@ -315,6 +330,15 @@ input {
   padding: 10px;
 }
 
+.counter-container {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  padding: 10px;
+  font-weight: bold;
+  font-size:20px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -385,7 +409,6 @@ input[type='number'] {
   width: stretch;
   place-items: center;
 }
-
 .neo-about p, .kavitha-about p, .steven-about p, .joey-about p {
   display: grid;
   align-self: start;
@@ -397,7 +420,8 @@ input[type='number'] {
 }
 
 .aboutTeam {
-  padding: 1rem;
+  margin:0;
+  padding: 1rem 0;
 }
 
 .aboutTeam img {
@@ -413,6 +437,7 @@ input[type='number'] {
   background-color: var(--dark-teal);
   color: var(--white);
   font-weight: bold;
+  width:200px;
   font-size: 1.5rem;
   padding: 20px;
   margin: 0 auto;
@@ -438,6 +463,10 @@ input[type='number'] {
     font-size: 16px;
   }
 
+  .header-container h1{
+    text-align:center;
+  }
+
   .navbar {
     font-size: 12px;
     padding: 0 20px;
@@ -458,6 +487,7 @@ input[type='number'] {
 
   .dropDownMenu > li{
     margin-top:15px;
+    margin-bottom:15px
   }
 
   .dropDownMenuLink{
@@ -502,7 +532,6 @@ input[type='number'] {
     display:block;
   }
 
-
   .buttonOpen {
     color:var(--white);
     z-index:2100;
@@ -516,6 +545,35 @@ input[type='number'] {
   .grid2x1{
     display:inline-block;
   }
+
+  .gridTwo-2x1 {
+    display: block;
+    margin: 1rem;
+  }
+
+  .gridTwo-2x1 div {
+    margin: 2rem;
+  }
+
+
+  .gridThree-2x1 {
+    display: block;
+  }
+
+  .gridThree-2x1 img{
+    display:none;
+  }
+
+  .gridFour-2x1 {
+    display: block;
+    margin: 1rem;
+    place-items: center;
+  }
+
+  .gridFour-2x1 img{
+    display:none;
+  }
+
   .tests-tab-container {
     max-width:100vw;
     margin-top:0;

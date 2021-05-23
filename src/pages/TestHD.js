@@ -28,6 +28,8 @@ const TestHD = () => {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [value, setValue] = useState(30);
   const [audio, setAudio] = useState(null);
+  const [audioNumber, setAudioNumber] = useState(0);
+
 
   useEffect(() => setAudio(document.getElementById("audio-element")), [randomIndexHD, language, score, value, audio]);
 
@@ -52,6 +54,7 @@ const TestHD = () => {
       currentAudioArray.splice(randomIndexHD, 1);
       setTestAudio(currentAudioArray);
       setRandomIndexHD(Math.floor(Math.random() * testAudio.length));
+      setAudioNumber(audioNumber+1);
     } else {
       setShowScore(true);
       setTestAudio([...testAudioOriginal]);
@@ -247,6 +250,9 @@ const TestHD = () => {
                     }}
                   >
                     Submit
+                  </div>
+                  <div className="counter-container">
+                    { audioNumber } / 9 
                   </div>
                 </div>
                 <div>

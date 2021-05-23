@@ -39,7 +39,7 @@ const AboutHD = () => {
       </div>
 
       <div className="content-section">
-        <Grid container style={{ margin: "0 4rem" }}>
+        <Grid container>
           {hdContents
             .filter((content) => content.filter === "types")
             .map((info, i) => (
@@ -65,14 +65,39 @@ const AboutHD = () => {
       </div>
 
       <div className="content-section">
-        <Grid container style={{ margin: "0 4rem" }}>
+        <Grid container>
           {hdContents
             .filter((content) => content.filter === "test")
             .map((info, i) => (
-              <div className="gridFour-2x1">
+              <div className="gridThree-2x1">
+                <Grid item md={12}>
+                  <Section
+                    key={i}
+                    title={info.title}
+                    description={info.infos}
+                    className="test-sectionHD"
+                  />
+                </Grid>
                 <Grid item md={8}>
                   <img
                     className="test-imageHD"
+                    src={info.image}
+                    alt={info.altImage}
+                  />
+                </Grid>
+              </div>
+            ))}
+        </Grid>
+      </div>
+      <div className="content-section">
+        <Grid container>
+          {hdContents
+            .filter((content) => content.filter === "pitch-test")
+            .map((info, i) => (
+              <div className="gridFour-2x1">
+                <Grid item md={4}>
+                  <img
+                    className="test-imageFreq"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -89,7 +114,6 @@ const AboutHD = () => {
             ))}
         </Grid>
       </div>
-      
       <Link to="/tests" className="test-link">
         Take the Test
       </Link>
