@@ -2,12 +2,15 @@ import React from "react";
 import stevenPhoto from "../assets/about-images/steven-photo.jpg";
 import kavithaPhoto from "../assets/about-images/kavitha-photo.jpg";
 import joeyPhoto from "../assets/about-images/professional-joey-photo.jpg";
-import neoPhoto from '../assets/about-images/neo-profile.jpg';
+import neoPhoto from "../assets/about-images/neo-profile.jpg";
+import "../App.css";
 
 const AboutTeam = () => {
   return (
     <div style={{ margin: "1rem 0 2rem 1rem" }} className="aboutTeam">
-      <h1 style={{ textAlign: "center" }}>About the Team</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>
+        About the Team
+      </h1>
 
       <div className="about-container gridFour-2x1">
         <div style={{ width: "50%" }}>
@@ -30,14 +33,9 @@ const AboutTeam = () => {
           </p>
         </div>
         <div style={{ width: "50%" }}>
-          <img
-            src={neoPhoto}
-            alt="Hseuh Yen Neo"
-            width="400"
-            height="400"
-          />
+          <img src={neoPhoto} alt="Hseuh Yen Neo" width="400" height="400" />
           <h2>Hsueh Yen Neo</h2>
-          <p style={{ width: "100%", fontSize: "1.3rem" }}>
+          <p style={{ width: "120%", fontSize: "1.3rem" }}>
             I am a full-stack web application developer based in Munich,
             Germany. I am currently working as a project lead, managing various
             projects with tech stacks of React, PHP, JS, JQuery, Docker and
