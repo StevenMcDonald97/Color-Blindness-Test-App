@@ -17,7 +17,7 @@ const AboutHD = () => {
           {hdContents
             .filter((content) => content.filter === "about")
             .map((info, i) => (
-              <div className="gridThree-2x1">
+              <div className="gridThree-2x1" key={"about"+i}>
                 <Grid item md={12}>
                   <Section
                     key={i}
@@ -28,7 +28,7 @@ const AboutHD = () => {
                 </Grid>
                 <Grid item md={10}>
                   <img
-                    className="about-imageHD"
+                    className="about-imageHD about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -43,10 +43,10 @@ const AboutHD = () => {
           {hdContents
             .filter((content) => content.filter === "types")
             .map((info, i) => (
-              <div className="gridFour-2x1">
+              <div className="gridFour-2x1" key={"types"+i}>
                 <Grid item md={10}>
                   <img
-                    className="types-imageHD"
+                    className="types-imageHD about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -69,7 +69,7 @@ const AboutHD = () => {
           {hdContents
             .filter((content) => content.filter === "test")
             .map((info, i) => (
-              <div className="gridThree-2x1">
+              <div className="gridThree-2x1" key={"test"+i}>
                 <Grid item md={12}>
                   <Section
                     key={i}
@@ -80,7 +80,7 @@ const AboutHD = () => {
                 </Grid>
                 <Grid item md={8}>
                   <img
-                    className="test-imageHD"
+                    className="test-imageHD about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -94,10 +94,10 @@ const AboutHD = () => {
           {hdContents
             .filter((content) => content.filter === "pitch-test")
             .map((info, i) => (
-              <div className="gridFour-2x1">
+              <div className="gridFour-2x1" key={"pitch-test"+i}>
                 <Grid item md={4}>
                   <img
-                    className="test-imageFreq"
+                    className="test-imageFreq about-img"
                     src={info.image}
                     alt={info.altImage}
                   />

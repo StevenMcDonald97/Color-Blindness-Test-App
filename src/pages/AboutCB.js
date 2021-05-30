@@ -17,10 +17,9 @@ const AboutCB = () => {
           {cbContents
             .filter((content) => content.filter === "about")
             .map((info, i) => (
-              <div className="gridThree-2x1">
+              <div className="gridThree-2x1" key={"about"+i}>
                 <Grid item md={12}>
                   <Section
-                    key={i}
                     className="about-sectionCB"
                     title={info.title}
                     description={info.infos}
@@ -28,7 +27,7 @@ const AboutCB = () => {
                 </Grid>
                 <Grid item md={10}>
                   <img
-                    className="about-imageCB"
+                    className="about-imageCB about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -43,10 +42,10 @@ const AboutCB = () => {
           {cbContents
             .filter((content) => content.filter === "types")
             .map((info, i) => (
-              <div className="gridFour-2x1" style={{ gridGap: "2rem" }}>
+              <div className="gridFour-2x1" style={{ gridGap: "2rem" }} key={"types"+i}>
                 <Grid item md={10}>
                   <img
-                    className="types-imageCB"
+                    className="types-imageCB about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
@@ -69,7 +68,7 @@ const AboutCB = () => {
           {cbContents
             .filter((content) => content.filter === "test")
             .map((info, i) => (
-              <div className="gridThree-2x1">
+              <div className="gridThree-2x1" key={"test"+i}>
                 <Grid item md={12}>
                   <Section
                     key={i}
@@ -80,7 +79,7 @@ const AboutCB = () => {
                 </Grid>
                 <Grid item md={10}>
                   <img
-                    className="test-imageCB"
+                    className="test-imageCB about-img"
                     src={info.image}
                     alt={info.altImage}
                     style={{ margin: "auto 0" }}

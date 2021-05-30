@@ -167,7 +167,7 @@ const MenuLink = () => {
                   TEAM
                 </NavLink>
               </li>
-              <li key="info">          
+              <li key="cbinfo">          
                 <NavLink
                   to="/about-color-blind"
                   className='dropDownMenuLink'
@@ -175,14 +175,15 @@ const MenuLink = () => {
                   COLOR BLINDNESS INFORMATION
                 </NavLink>
               </li>
-              <li key="info">          
+              <li key="hdinfo">          
                 <NavLink
                   to="/about-hearing-disability"
                   className='dropDownMenuLink'
                 >
                   HEARING INFORMATION
                 </NavLink>
-              </li>              <li key="tests">   
+              </li>              
+              <li key="tests">   
                 <NavLink
                   to="/tests"
                   className='dropDownMenuLink'

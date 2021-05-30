@@ -23,14 +23,16 @@ const TestPitch = () => {
   useEffect(() => setAudio(document.getElementById("audio-element")), [notSelected, score, value, audio, testAudio, playTime]);
 
   const playAudio = () => {
-    let timeout = 100*(Math.floor(Math.random() * 45) + 20);
+    let timeout = 100*(Math.floor(Math.random() * 50) + 15);
+    let currentAudio=testAudio[0];
     setTimeout(function () {
-      var d = new Date();
-      setPlayTime(d.getTime());
-      audio.volume = value/100.0;
-      audio.play();
+      if (testAudio[0]===currentAudio){
+        var d = new Date();
+        setPlayTime(d.getTime());
+        audio.volume = value/100.0;
+        audio.play();
+      }
     }, timeout); 
-
   };
 
   const checkAnswer = () => {

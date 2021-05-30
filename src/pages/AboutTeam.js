@@ -13,6 +13,7 @@ const AboutTeam = () => {
         <div style={{ width: "50%" }}>
           <img
             src={kavithaPhoto}
+            className="team-img"
             alt="Kavitha Krishnamurthy"
             width="400"
             height="400"
@@ -32,6 +33,7 @@ const AboutTeam = () => {
         <div style={{ width: "50%" }}>
           <img
             src={neoPhoto}
+            className="team-img"
             alt="Hseuh Yen Neo"
             width="400"
             height="400"
@@ -56,6 +58,7 @@ const AboutTeam = () => {
         <div style={{ width: "50%" }}>
           <img
             src={stevenPhoto}
+            className="team-img"
             alt="Steven McDonald"
             width="400"
             height="400"
@@ -70,7 +73,13 @@ const AboutTeam = () => {
         </div>
 
         <div style={{ width: "50%" }}>
-          <img src={joeyPhoto} alt="Joey Bruno" width="400" height="400" />
+          <img 
+            src={joeyPhoto} 
+            className="team-img"
+            alt="Joey Bruno" 
+            width="400" 
+            height="400" 
+          />
           <h2>Joey Bruno</h2>
           <p style={{ width: "120%", fontSize: "1.3rem" }}>
             I am a Teaching Assistant for an online Digital Marketing class with
@@ -94,7 +103,7 @@ const AboutTeam = () => {
           the chance to help people living in places that we may never visit. We
           decided to design a website and give it to an NGO, so that while
           conducting health camps across India, they can use it as web based
-          tool for for diagnosing color blindness and hearing problems. From all
+          tool for diagnosing color blindness and hearing problems. From all
           four of us, this website is our small contribution to society.
         </p>
       </div>

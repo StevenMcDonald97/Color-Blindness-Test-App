@@ -57,6 +57,7 @@ const TestHD = () => {
       setAudioNumber(audioNumber+1);
     } else {
       setShowScore(true);
+      setAudioNumber(0);
       setTestAudio([...testAudioOriginal]);
     }
   }
@@ -72,6 +73,7 @@ const TestHD = () => {
 
   const submitAnswer = () => {
     audio.pause();
+    setSelectedAnswer("")
     checkAnswer();
     nextTestAudio()
   }
