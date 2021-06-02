@@ -70,7 +70,7 @@ const AboutHD = () => {
             .filter((content) => content.filter === "test")
             .map((info, i) => (
               <div className="gridThree-2x1" key={"test"+i}>
-                <Grid item md={12}>
+                <Grid item lg={12}>
                   <Section
                     key={i}
                     title={info.title}
@@ -78,7 +78,7 @@ const AboutHD = () => {
                     className="test-sectionHD"
                   />
                 </Grid>
-                <Grid item md={8}>
+                <Grid item lg={4} md={4}> 
                   <img
                     className="test-imageHD about-img"
                     src={info.image}
@@ -95,19 +95,19 @@ const AboutHD = () => {
             .filter((content) => content.filter === "pitch-test")
             .map((info, i) => (
               <div className="gridFour-2x1" key={"pitch-test"+i}>
-                <Grid item md={4}>
+                <Grid item lg={4} md={4}>
                   <img
-                    className="test-imageFreq about-img"
+                    className="pitch-test-imageHD about-img"
                     src={info.image}
                     alt={info.altImage}
                   />
                 </Grid>
-                <Grid item md={12}>
+                <Grid item lg={12}>
                   <Section
                     key={i}
                     title={info.title}
                     description={info.infos}
-                    className="test-sectionHD"
+                    className="pitch-test-sectionHD
                   />
                 </Grid>
               </div>
