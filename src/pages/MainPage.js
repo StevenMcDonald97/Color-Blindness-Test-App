@@ -77,7 +77,7 @@ const MainPage = () => {
           <div className="footer-description">
             Finely Tuned by Kavitha Krishnamurthy, Hsueh Yen Neo, Steven McDonald, and Joey Bruno 
             <br />
-            Contact our team at: <a href = "mailto: team2sense@gmail.com ">team2sense@gmail.com</a>
+            Contact our team at: <a href = "mailto: team2senses@gmail.com ">team2sense@gmail.com</a>
             
           </div>
         </div>
