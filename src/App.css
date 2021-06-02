@@ -227,20 +227,34 @@
 }
 
 .test-imageHD {
-  transform: rotate(270deg) scale(2);
+  transform: rotate(270deg) scale(5);
   display: flex;
   align-items: flex-end;
 }
 
-.test-imageFreq {
-  transform: rotate(270deg) scale(4);
-  display: flex;
-  align-items: flex-end;
+.pitch-test-imageHD {
+  transform: scale(3);
+  margin-top: 1rem;
 }
 
-.about-imageCB, .types-imageCB, .test-imageCB, .about-imageHD, .types-imageHD, .test-imageFreq, .test-imageHD {
+.types-imageHD, .about-imageCB {
+  transform: scale(1.5);
+  margin-left: 2rem;
+}
+
+.test-imageCB {
+  width: 80%;
+  transform: scale(3);
+}
+
+.about-imageCB, .test-imageCB {
+  width: 80%;
+};
+
+.about-imageHD, .types-imageHD, .pitch-test-imageHD, .test-imageHD {
   width: 80%;
 }
+
 
 .about-sectionCB {
   display: flex;
@@ -421,7 +435,6 @@ input[type='number'] {
 
 .aboutTeam {
   margin:0;
-  padding: 1rem 0;
 }
 
 .aboutTeam img {
