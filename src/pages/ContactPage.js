@@ -5,10 +5,10 @@ import { faTools } from "@fortawesome/free-solid-svg-icons";
 
 const ContactPage = () => {
   return (
-    <Container maxWidth="lg" style={{ justifyContent: "center" }}>
-      <h1 style={{ fontSize: "4rem" }}>Contact Us</h1>
+    <Container maxWidth="lg">
+      <h1 style={{ fontSize: "4rem", textAlign: 'center' }}>Contact Us</h1>
       <br />
-      <h2 style={{ fontSize: "8rem", fontWeight: "100" }}>
+      <h2 style={{ fontSize: "8rem", fontWeight: "100", textAlign: 'center' }}>
         <FontAwesomeIcon icon={faTools} /> In Construction{" "}
       </h2>
     </Container>

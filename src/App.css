@@ -219,12 +219,12 @@
 }
 
 .test-imageHD {
-  transform: rotate(270deg) scale(4.5);
+  transform: rotate(270deg) scale(5);
   display: flex;
   align-items: flex-end;
 };
 
-.about-imageCB, .types-imageHD, .test-imageHD, .test-imageCB {
+.about-imageCB, .test-imageHD, .test-imageCB {
   width: 80%;
 };
 
@@ -238,8 +238,13 @@
   transform: scale(3);
 }
 
-.about-imageHD {
-  width: 10%;
+.about-imageHD, .types-imageHD, .pitch-test-imageHD, .test-imageHD {
+  width: 80%;
+}
+
+.pitch-test-imageHD {
+  transform: scale(3);
+  margin-top: 1rem;
 }
 
 .types-imageHD, .about-imageCB {
