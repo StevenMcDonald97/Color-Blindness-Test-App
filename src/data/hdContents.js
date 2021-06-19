@@ -29,11 +29,12 @@ const hdContents = [
  {
       filter: "pitch-test",
       title: "About the Frequencies Test",
-      image: musicSheet,
       infos: [  
         "This online frequency test is designed to help users find out if they may have problems with hearing certain frequencies and if they should consult a hearing care professional.",
         "In this test users will be asked to listen to tones at 250, 500, 1000, 2000, 3000, 4000, and 8000HZ, and if they can hear them press a button labeled 'Heard'. If they cannot hear them, they will press 'Didn't Hear'. This test is a self-assessment tool to measure hearing difficulties and problems. This test is for informational purposes only and cannot diagnose hearing disorders by itself. If you believe you may have a hearing impairment please consult an ENT Doctor or Otolaryngologist. Results may vary depending on many factors including the type and quality of your device audio and the noise in your surroundings.",                                    
-      ]
+      ],
+      image: musicSheet,
+      altImage: "Headphones on a Music Sheet"
  },
   {
     filter: "types",
