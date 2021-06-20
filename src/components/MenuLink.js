@@ -71,13 +71,6 @@ const MenuLink = () => {
             </Button>
           </span>
           <span>
-            <Button style={styles.link}>
-              <NavLink exact to="/about-team" activeStyle={styles.activeLink}>
-                TEAM
-              </NavLink>
-            </Button>
-          </span>
-          <span>
             <Button
               aria-haspopup="true"
               onClick={handleClick}
@@ -127,7 +120,13 @@ const MenuLink = () => {
               </NavLink>
             </Button>
           </span>
-
+          <span>
+            <Button style={styles.link}>
+              <NavLink exact to="/about-team" activeStyle={styles.activeLink}>
+                TEAM
+              </NavLink>
+            </Button>
+          </span>
           <span>
             <Button style={styles.link}>
               <NavLink
@@ -159,14 +158,6 @@ const MenuLink = () => {
                   HOME
                 </NavLink>
               </li>
-              <li key="about">          
-                <NavLink
-                  to="/about-team"
-                  className='dropDownMenuLink'
-                >
-                  TEAM
-                </NavLink>
-              </li>
               <li key="cbinfo">          
                 <NavLink
                   to="/about-color-blind"
@@ -189,6 +180,14 @@ const MenuLink = () => {
                   className='dropDownMenuLink'
                 >
                   TAKE A TEST
+                </NavLink>
+              </li>
+              <li key="about">          
+                <NavLink
+                  to="/about-team"
+                  className='dropDownMenuLink'
+                >
+                  TEAM
                 </NavLink>
               </li>
               <li key="contact">   

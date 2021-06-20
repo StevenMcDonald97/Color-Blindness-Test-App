@@ -9,7 +9,7 @@ const AboutCB = () => {
   return (
     <div className="main" style={{ margin: "2rem" }}>
       <div className="header-container">
-        <h1 style={{ marginBottom: "2rem" }}>About Color Blindness</h1>
+        <h1 style={{ marginBottom: "1rem" }}>About Color Blindness</h1>
       </div>
 
       <div className="content-section">
@@ -20,7 +20,8 @@ const AboutCB = () => {
               <div className="gridThree-2x1" key={"about"+i}>
                 <Grid item md={12}>
                   <Section
-                    className="about-sectionCB"
+                    key={i}
+                    className="about-sectionCB section-description"
                     title={info.title}
                     description={info.infos}
                   />
@@ -43,14 +44,15 @@ const AboutCB = () => {
             .filter((content) => content.filter === "types")
             .map((info, i) => (
               <div className="gridFour-2x1" style={{ gridGap: "2rem" }} key={"types"+i}>
-                <Grid item md={10}>
+                <Grid item md={12}>
                   <img
                     className="types-imageCB about-img"
                     src={info.image}
                     alt={info.altImage}
+                    style={{transform: "scale(.9)"}}
                   />
                 </Grid>
-                <Grid item md={12}>
+                <Grid item md={8}>
                   <Section
                     key={i}
                     className="types-sectionCB"
@@ -58,6 +60,7 @@ const AboutCB = () => {
                     description={info.infos}
                   />
                 </Grid>
+
               </div>
             ))}
         </Grid>
@@ -69,7 +72,7 @@ const AboutCB = () => {
             .filter((content) => content.filter === "test")
             .map((info, i) => (
               <div className="gridThree-2x1" key={"test"+i}>
-                <Grid item md={12}>
+                <Grid item lg={12}>
                   <Section
                     key={i}
                     className="test-sectionCB"
@@ -77,12 +80,11 @@ const AboutCB = () => {
                     description={info.infos}
                   />
                 </Grid>
-                <Grid item md={10}>
+                <Grid item lg={4} md={4}>
                   <img
                     className="test-imageCB about-img"
                     src={info.image}
                     alt={info.altImage}
-                    style={{ margin: "auto 0" }}
                   />
                 </Grid>
               </div>
